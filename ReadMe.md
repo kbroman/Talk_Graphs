@@ -12,6 +12,10 @@ This was inspired by Howard Wainer's article, whose title I stole:
 A recent PDF is
 [here](http://www.biostat.wisc.edu/~kbroman/presentations/graphs2013.pdf).
 
+The [R](https://github.com/kbroman/Talk_Graphs/tree/master/R)
+directory contains the R code to make the (generally nicer) figures,
+plus Excel files in which the uglier figures were made.
+
    <hr/>
 
 To the extent possible under law,
