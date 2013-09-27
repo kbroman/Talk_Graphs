@@ -28,7 +28,8 @@ directory contains only the Excel-based figures; the R-based figures
 are not included in the respository.
 
 There's also slides of the
-&ldquo;[Top Ten Worst Graphs](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs).&rdquo;
+&ldquo;[Top Ten Worst Graphs](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs)&rdquo;
+([pdf here](http://www.biostat.wisc.edu/~kbroman/presentations/topten.pdf)).
 The needed figures are not in this repository, but are available
 [here](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip).
 
