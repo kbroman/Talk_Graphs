@@ -1,8 +1,8 @@
 Figs/*.tiff
 Figs/*.bmp
 graphs.pdf
-graphs.aux
-graphs.log
+*.aux
+*.log
 Figs/Old
 Backup
 .Rhistory
@@ -44,3 +44,5 @@ Figs/fig6r_a.png
 Figs/fig6r_b.png
 Figs/fig6r_c.png
 Figs/fig6r_d.png
+topten.pdf
+TopTenWorstGraphs

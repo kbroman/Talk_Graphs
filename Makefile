@@ -1,5 +1,16 @@
+all: graphs.pdf topten.pdf
+
 graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png
 	pdflatex graphs
+
+topten.pdf: topten.tex TopTenWorstGraphs/broman_fig1.jpg
+	pdflatex topten
+
+TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
+	unzip TopTenWorstGraphs.zip
+
+TopTenWorstGraphs.zip:
+	wget http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip
 
 Figs/fig1a.png: R/fig1.R
 	cd R;R CMD BATCH fig1.R fig1.Rout

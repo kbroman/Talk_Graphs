@@ -27,6 +27,11 @@ The [Figs](https://github.com/kbroman/Talk_Graphs/tree/master/Figs)
 directory contains only the Excel-based figures; the R-based figures
 are not included in the respository.
 
+There's also slides of the
+&ldquo;[Top Ten Worst Graphs](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs).&rdquo;
+The needed figures are not in this repository, but are available
+[here](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip).
+
    <hr/>
 
 To the extent possible under law,
