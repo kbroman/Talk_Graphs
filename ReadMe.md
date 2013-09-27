@@ -4,6 +4,11 @@
 These are slides for a talk that I give as often as possible, because
 it's fun.
    
+This was inspired by Howard Wainer's article, whose title I stole:
+[H Wainer (1984) How to display data badly American Statistician
+38:137-147](http://www.rci.rutgers.edu/~roos/Courses/grstat502/wainer.pdf)
+
+
 A recent PDF is
 [here](http://www.biostat.wisc.edu/~kbroman/presentations/graphs2013.pdf).
    
