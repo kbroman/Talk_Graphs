@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[landscape,pdftex]{geometry}
+\usepackage{fancyhdr}
+
+\DeclareOption{bigsym}{\DeclareSymbolFont{largesymbols}{OMX}{psycm}{m}{n}}
+\ProcessOptions
+
+\setlength{\oddsidemargin}{-0.75in}
+\setlength{\evensidemargin}{-0.75in}
+\setlength{\topmargin}{-1in}
+\setlength{\textheight}{7.75in}
+\setlength{\textwidth}{10.5in}
+\setlength{\footskip}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+
+\renewcommand{\familydefault}{phv} % helvetica
+
+% following: color
+\definecolor{mybgcolor}{rgb}{0,0,0.3125}
+\definecolor{myyellow}{rgb}{1,1,0.4}
+\definecolor{myblue}{rgb}{0.4,0.8,1}
+\definecolor{mypink}{rgb}{1,0.4,1}
+\definecolor{myhotpink}{rgb}{1,0,0.5}
+\definecolor{mywhite}{rgb}{1,1,1}
+
+% header/footer layout
+\pagestyle{fancy}
+\lhead{} \chead{} \rhead{}
+\lfoot{} \cfoot{} \rfoot{\color{myyellow} \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% font sizes
+\newcommand{\superlarge}{\fontsize{60}{60} \selectfont}
+\newcommand{\titlesize}{\fontsize{40}{50} \selectfont}
+\newcommand{\headsize}{\fontsize{35}{35} \selectfont}
+\newcommand{\textsize}{\fontsize{30}{35} \selectfont}
+\newcommand{\smallsize}{\fontsize{25}{30} \selectfont}
+\newcommand{\smallersize}{\fontsize{20}{25} \selectfont}
+\newcommand{\smallestsize}{\fontsize{18}{22} \selectfont}
+\newcommand{\evensmaller}{\fontsize{14}{18} \selectfont}
+\newcommand{\lod}{\text{LOD}}
+\newcommand{\bic}{\text{BIC}}
+\newcommand{\rss}{\text{RSS}}
+\newcommand{\var}{\text{var}}
+\newcommand{\M}{\text{M}}
+%\renewcommand{\log}{\text{log}}
+%\renewcommand{\max}{\text{max}}
+
+
+<<opt, echo=FALSE, results="hide">>=
+library(plotrix) # for draw.circle
+library(knitr)
+opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
+               fig.path="MoreFigs/", verbose=TRUE, 
+               fig.height=6.5, fig.width=10,
+               fig.align="center")
+@
+
+\pagecolor{mybgcolor}
+\color{mywhite}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\titlesize \color{myyellow}
+
+\vspace*{19.5mm}
+
+{\headsize More on data visualization}
+
+\vspace*{19.5mm}
+
+\color{mypink}
+\rule{10in}{1mm}
+%\vspace{-10mm}
+
+\vspace{10mm}
+
+\textsize \color{myblue}
+Karl W Broman
+\vspace{5mm}
+
+{\smallersize Department of Biostatistics \& Medical Informatics
+
+University of Wisconsin -- Madison
+\vspace{20mm}
+
+
+\verb|www.biostat.wisc.edu/~kbroman| 
+}
+
+\end{center}
+
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill 
+\begin{minipage}{6.25in}
+\centering
+Respect the visual metaphor
+\end{minipage}
+
+\vfill
+
+<<circles_messed_up>>=
+bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
+bgcolor <- rgb(0, 0, 80, maxColorValue=255)
+
+par(mar=rep(0.1, 4), bg=bgcolor, col="white")
+plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="", 
+     xaxt="n", yaxt="n", xaxs="i", yaxs="i")
+library(plotrix)
+draw.circle(20, 20, 17,     nv=251, lwd=2, border="wheat", col="wheat")
+text(15, 15, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
+draw.circle( 1,  1,  0.145, nv=251, lwd=2, border="lightgreen", col="lightgreen")
+text(1.2, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
+draw.circle( 4,  6,  3.2,   nv=251, lwd=2, border="Orchid", col="Orchid")
+text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
+@
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill 
+\begin{minipage}{6.25in}
+\centering
+Respect the visual metaphor
+\end{minipage}
+
+\vfill
+
+<<circles_fixed>>=
+bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
+bgcolor <- rgb(0, 0, 80, maxColorValue=255)
+
+par(mar=rep(0.1, 4), bg=bgcolor, col="white")
+mx <- 25*sqrt(3.2/pi)/3.2
+plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="", 
+     xaxt="n", yaxt="n", xaxs="i", yaxs="i")
+library(plotrix)
+draw.circle(5, 5, sqrt(17/pi),     nv=251, lwd=2, border="wheat", col="wheat")
+text(5, 5, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
+draw.circle(0.5, 0.5, sqrt(0.145/pi), nv=251, lwd=2, border="lightgreen", col="lightgreen")
+text(1.0, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
+draw.circle( 2,  2,  sqrt(3.2/pi),   nv=251, lwd=2, border="Orchid", col="Orchid")
+text(2, 2.5, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
+@
+
+\end{document}

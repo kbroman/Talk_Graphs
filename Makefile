@@ -1,10 +1,16 @@
-all: graphs.pdf topten.pdf
+all: graphs.pdf topten.pdf more_on_graphs.pdf
 
 graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png
 	pdflatex graphs
 
 topten.pdf: topten.tex TopTenWorstGraphs/broman_fig1.jpg
 	pdflatex topten
+
+more_on_graphs.pdf: more_on_graphs.tex
+	pdflatex more_on_graphs
+
+more_on_graphs.tex: more_on_graphs.Rnw
+	Rscript -e "library(knitr);knit('more_on_graphs.Rnw')"
 
 TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
 	unzip TopTenWorstGraphs.zip
