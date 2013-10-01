@@ -54,13 +54,16 @@
 %\renewcommand{\max}{\text{max}}
 
 
-<<opt, echo=FALSE, results="hide">>=
+<<options, echo=FALSE, results="hide">>=
 library(plotrix) # for draw.circle
-library(knitr)
 opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
                fig.path="MoreFigs/", verbose=TRUE, 
                fig.height=6.5, fig.width=10,
                fig.align="center")
+
+# background colors
+bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
+bgcolor <- rgb(0, 0, 80, maxColorValue=255)
 @
 
 \pagecolor{mybgcolor}
@@ -108,7 +111,10 @@ University of Wisconsin -- Madison
 \hfill 
 \begin{minipage}{6.25in}
 \centering
-Respect the visual metaphor
+Don't distort the quantities
+
+\color{myblue} \smallsize
+(value $\propto$ {\color{mypink} radius})
 \end{minipage}
 
 \vfill
@@ -117,12 +123,13 @@ Respect the visual metaphor
 bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
 bgcolor <- rgb(0, 0, 80, maxColorValue=255)
 
+mult <- sqrt(3.2/pi)/3.2
 par(mar=rep(0.1, 4), bg=bgcolor, col="white")
 plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="", 
      xaxt="n", yaxt="n", xaxs="i", yaxs="i")
 library(plotrix)
 draw.circle(20, 20, 17,     nv=251, lwd=2, border="wheat", col="wheat")
-text(15, 15, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
+text(5/mult, 4/mult, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
 draw.circle( 1,  1,  0.145, nv=251, lwd=2, border="lightgreen", col="lightgreen")
 text(1.2, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
 draw.circle( 4,  6,  3.2,   nv=251, lwd=2, border="Orchid", col="Orchid")
@@ -136,26 +143,27 @@ text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 \hfill 
 \begin{minipage}{6.25in}
 \centering
-Respect the visual metaphor
+Don't distort the quantities
+
+\color{myblue} \smallsize
+(value $\propto$ area)
 \end{minipage}
 
 \vfill
 
 <<circles_fixed>>=
-bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
-bgcolor <- rgb(0, 0, 80, maxColorValue=255)
-
+mx <- 25*mult
 par(mar=rep(0.1, 4), bg=bgcolor, col="white")
-mx <- 25*sqrt(3.2/pi)/3.2
 plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="", 
      xaxt="n", yaxt="n", xaxs="i", yaxs="i")
 library(plotrix)
-draw.circle(5, 5, sqrt(17/pi),     nv=251, lwd=2, border="wheat", col="wheat")
-text(5, 5, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
-draw.circle(0.5, 0.5, sqrt(0.145/pi), nv=251, lwd=2, border="lightgreen", col="lightgreen")
-text(1.0, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
-draw.circle( 2,  2,  sqrt(3.2/pi),   nv=251, lwd=2, border="Orchid", col="Orchid")
-text(2, 2.5, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
+draw.circle(5, 4, sqrt(17/pi),     nv=251, lwd=2, border="wheat", col="wheat")
+text(5, 4, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
+draw.circle(mult*0.9, mult*1.7, sqrt(0.145/pi), nv=251, lwd=2, border="lightgreen", col="lightgreen")
+text(1.2*mult, 0.5*mult, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
+draw.circle(4*mult,  6*mult,  sqrt(3.2/pi),   nv=251, lwd=2, border="Orchid", col="Orchid")
+text(4*mult, 4*mult, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 @
+
 
 \end{document}
