@@ -33,7 +33,7 @@ There's also slides of the
 The needed figures are not in this repository, but are available
 [here](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip).
 
-I'm working on a third set of slides, ``More on data visualization,''
+I'm working on a third set of slides, &ldquo;More on data visualization,&rdquo;
 with further advice on developing data visualizations.
 
 <hr/>
