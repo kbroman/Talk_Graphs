@@ -57,7 +57,7 @@
 <<options, echo=FALSE, results="hide">>=
 library(plotrix) # for draw.circle
 opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
-               fig.path="MoreFigs/", verbose=TRUE, 
+               fig.path="MoreFigs/", verbose=TRUE,
                fig.height=6.5, fig.width=10,
                fig.align="center")
 
@@ -98,7 +98,7 @@ University of Wisconsin -- Madison
 \vspace{20mm}
 
 
-\verb|www.biostat.wisc.edu/~kbroman| 
+\verb|www.biostat.wisc.edu/~kbroman|
 }
 
 \end{center}
@@ -108,7 +108,7 @@ University of Wisconsin -- Madison
 
 
 \headsize \color{myyellow}
-\hfill 
+\hfill
 \begin{minipage}{6.25in}
 \centering
 Don't distort the quantities
@@ -125,7 +125,7 @@ bgcolor <- rgb(0, 0, 80, maxColorValue=255)
 
 mult <- sqrt(3.2/pi)/3.2
 par(mar=rep(0.1, 4), bg=bgcolor, col="white")
-plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="", 
+plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="",
      xaxt="n", yaxt="n", xaxs="i", yaxs="i")
 library(plotrix)
 draw.circle(20, 20, 17,     nv=251, lwd=2, border="wheat", col="wheat")
@@ -140,7 +140,7 @@ text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 
 
 \headsize \color{myyellow}
-\hfill 
+\hfill
 \begin{minipage}{6.25in}
 \centering
 Don't distort the quantities
@@ -154,7 +154,7 @@ Don't distort the quantities
 <<circles_fixed>>=
 mx <- 25*mult
 par(mar=rep(0.1, 4), bg=bgcolor, col="white")
-plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="", 
+plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="",
      xaxt="n", yaxt="n", xaxs="i", yaxs="i")
 library(plotrix)
 draw.circle(5, 4, sqrt(17/pi),     nv=251, lwd=2, border="wheat", col="wheat")
