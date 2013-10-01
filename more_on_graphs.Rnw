@@ -129,7 +129,7 @@ plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="",
 draw.circle(20, 20, gL["Wheat"],     nv=251, lwd=2, border="wheat", col="wheat")
 text(5/mult, 4/mult, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
 draw.circle( 1,  1,  gL["Arabidopsis"], nv=251, lwd=2, border="lightgreen", col="lightgreen")
-text(1.2, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
+text(1.3, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
 draw.circle( 4,  6,  gL["Human"],   nv=251, lwd=2, border="Orchid", col="Orchid")
 text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 @
@@ -157,7 +157,7 @@ plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="",
 draw.circle(5, 4, sqrt(gL["Wheat"]/pi),     nv=251, lwd=2, border="wheat", col="wheat")
 text(5, 4, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
 draw.circle(mult*0.9, mult*1.7, sqrt(gL["Arabidopsis"]/pi), nv=251, lwd=2, border="lightgreen", col="lightgreen")
-text(1.2*mult, 0.5*mult, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
+text(1.3*mult, 0.5*mult, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
 draw.circle(4*mult,  6*mult,  sqrt(gL["Human"]/pi),   nv=251, lwd=2, border="Orchid", col="Orchid")
 text(4*mult, 4*mult, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 @
