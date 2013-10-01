@@ -120,19 +120,17 @@ Don't distort the quantities
 \vfill
 
 <<circles_messed_up>>=
-bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
-bgcolor <- rgb(0, 0, 80, maxColorValue=255)
+gL <- c("Arabidopsis"=0.145, "Human" = 3.2, "Wheat"=17)
 
-mult <- sqrt(3.2/pi)/3.2
+mult <- sqrt(gL["Human"]/pi)/gL["Human"]
 par(mar=rep(0.1, 4), bg=bgcolor, col="white")
 plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="",
      xaxt="n", yaxt="n", xaxs="i", yaxs="i")
-library(plotrix)
-draw.circle(20, 20, 17,     nv=251, lwd=2, border="wheat", col="wheat")
+draw.circle(20, 20, gL["Wheat"],     nv=251, lwd=2, border="wheat", col="wheat")
 text(5/mult, 4/mult, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
-draw.circle( 1,  1,  0.145, nv=251, lwd=2, border="lightgreen", col="lightgreen")
+draw.circle( 1,  1,  gL["Arabidopsis"], nv=251, lwd=2, border="lightgreen", col="lightgreen")
 text(1.2, 0.5, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
-draw.circle( 4,  6,  3.2,   nv=251, lwd=2, border="Orchid", col="Orchid")
+draw.circle( 4,  6,  gL["Human"],   nv=251, lwd=2, border="Orchid", col="Orchid")
 text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 @
 
@@ -156,14 +154,41 @@ mx <- 25*mult
 par(mar=rep(0.1, 4), bg=bgcolor, col="white")
 plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="",
      xaxt="n", yaxt="n", xaxs="i", yaxs="i")
-library(plotrix)
-draw.circle(5, 4, sqrt(17/pi),     nv=251, lwd=2, border="wheat", col="wheat")
+draw.circle(5, 4, sqrt(gL["Wheat"]/pi),     nv=251, lwd=2, border="wheat", col="wheat")
 text(5, 4, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
-draw.circle(mult*0.9, mult*1.7, sqrt(0.145/pi), nv=251, lwd=2, border="lightgreen", col="lightgreen")
+draw.circle(mult*0.9, mult*1.7, sqrt(gL["Arabidopsis"]/pi), nv=251, lwd=2, border="lightgreen", col="lightgreen")
 text(1.2*mult, 0.5*mult, "Arabidopsis (0.145 Gbp)", col="lightgreen", adj=c(0, 0.5))
-draw.circle(4*mult,  6*mult,  sqrt(3.2/pi),   nv=251, lwd=2, border="Orchid", col="Orchid")
+draw.circle(4*mult,  6*mult,  sqrt(gL["Human"]/pi),   nv=251, lwd=2, border="Orchid", col="Orchid")
 text(4*mult, 4*mult, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 @
 
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Don't use areas at all
+
+\color{myblue} \smallsize
+(value $\propto$ length)
+\end{minipage}
+
+\vfill
+
+<<circles_barplot.fig.width=6.5>>=
+par(mar=c(5.1, 5.1, 0.6, 0.6), bg=bgcolor, col="white",
+    col.lab="white", col.axis="white")
+b <- barplot(gL, col=c("lightgreen", "Orchid", "wheat"), ylab="Genome size (Gbp)",
+             ylim=c(0, 18), col.lab="white", yaxs="i", yaxt="n",
+             names.arg=rep("", 3), cex.lab=1.5)
+u <- par("usr")
+rect(u[1], u[3], u[2], u[4], border="white")
+axis(side=2, col.axis="white", las=1, col="white", cex.axis=1.5)
+axis(side=1, at=b, names(gL), col.axis="white", las=1, col="white",
+     cex.axis=1.5, tick=FALSE)
+@
 
 \end{document}
