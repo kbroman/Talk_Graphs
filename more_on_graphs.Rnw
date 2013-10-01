@@ -76,11 +76,11 @@ bgcolor <- rgb(0, 0, 80, maxColorValue=255)
 \begin{center}
 \titlesize \color{myyellow}
 
-\vspace*{19.5mm}
+\vspace*{29.5mm}
 
 {\headsize More on data visualization}
 
-\vspace*{19.5mm}
+\vspace*{9.5mm}
 
 \color{mypink}
 \rule{10in}{1mm}
@@ -178,8 +178,8 @@ Don't use areas at all
 
 \vfill
 
-<<circles_barplot.fig.width=6.5>>=
-par(mar=c(5.1, 5.1, 0.6, 0.6), bg=bgcolor, col="white",
+<<circles_barplot,fig.width=6.5>>=
+par(mar=c(3.1, 5.1, 0.6, 0.6), bg=bgcolor, col="white",
     col.lab="white", col.axis="white")
 b <- barplot(gL, col=c("lightgreen", "Orchid", "wheat"), ylab="Genome size (Gbp)",
              ylim=c(0, 18), col.lab="white", yaxs="i", yaxt="n",
