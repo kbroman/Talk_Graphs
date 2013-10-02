@@ -583,6 +583,50 @@ text(4.7,  2.2,  levels(iris$Species)[3], adj=c(1, 0.5), col=pink)
 \hfill
 \begin{minipage}{6.25in}
 \centering
+Don't sort alphabetically
+\end{minipage}
+
+\vfill
+
+<<alphabet>>=
+load("Data/health.RData")
+
+par(mfrow=c(1,2), bg=bgcolor, las=1, fg="white",
+    col.lab="white", col.axis="white",
+    mar=c(5.1, 10.1, 1.1, 1.1))
+
+plot(0, 0, type="n", xlab="Health care spending (% GDP)",
+     ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
+     ylim=c(nrow(health), 0)+0.5, yaxs="i")
+for(i in 1:nrow(health))
+  axis(side=2, at=i, health[i,1],
+       col.axis = ifelse(i %% 5 == 0, blue, "white"))
+abline(v=seq(5, 15, by=5), col="gray20")
+points(health[,2], 1:25, col = ifelse(1:25 %% 5 == 0, blue, "white"))
+
+o <- order(health[,2])
+plot(0, 0, type="n", xlab="Health care spending (% GDP)",
+     ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
+     ylim=c(nrow(health), 0)+0.5, yaxs="i")
+for(i in 1:nrow(health))
+  axis(side=2, at=i, health[o[i],1],
+       col.axis = ifelse(i %% 5 == 0, blue, "white"))
+abline(v=seq(5, 15, by=5), col="gray20")
+points(health[o,2], 1:25, col = ifelse(1:25 %% 5 == 0, blue, "white"))
+@
+
+
+
+
+
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
 Must you include 0?
 \end{minipage}
 
@@ -615,7 +659,6 @@ segments(x-xd/2, rate+se, x+xd/2, rate+se, lwd=2, col=c(blue, green, pink))
 segments(x-xd, rate, x+xd, rate, lwd=3, col=c(blue, green, pink))
 axis(side=1, at=1:3, LETTERS[1:3], cex.axis=1.5)
 @
-
 
 
 
