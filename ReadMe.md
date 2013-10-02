@@ -34,7 +34,9 @@ The needed figures are not in this repository, but are available
 [here](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip).
 
 I'm working on a third set of slides, &ldquo;More on data visualization,&rdquo;
-with further advice on developing data visualizations.
+with further advice on developing data visualizations. [[pdf here](http://www.biostat.wisc.edu/~kbroman/presentations/more_on_graphs.pdf)]
+
+Also see the [combined pdf](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_combined.pdf).
 
 <hr/>
 
