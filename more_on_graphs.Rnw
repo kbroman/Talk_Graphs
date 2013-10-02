@@ -543,7 +543,7 @@ hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
 \hfill
 \begin{minipage}{6.25in}
 \centering
-Use direct labels
+Use labels not legends
 \end{minipage}
 
 \vfill
@@ -570,6 +570,49 @@ text(2.2,  0.4,  levels(iris$Species)[1], adj=c(0, 0.5), col=blue)
 text(3.25, 1.4,  levels(iris$Species)[2], adj=c(1, 0.5), col=green)
 text(4.7,  2.2,  levels(iris$Species)[3], adj=c(1, 0.5), col=pink)
 @
+
+\newpage
+
+
+
+
+
+\headsize \color{myyellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Summary
+\end{minipage}
+
+\vspace{30mm}
+
+\smallestsize \color{mywhite}
+\hspace{0.5in} \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep24pt
+
+\item Put the things to be compared next to each other
+
+\item Use color to set things apart, but consider color blind folks
+
+\item Use position rather than angle or area to represent quantities
+
+\item Align things vertically to ease comparisons
+
+\item Use common axis limits to ease comparisons
+
+\item Use labels rather than legends
+
+\item Sort on meaningful variables (not alphabetically)
+
+\item Must 0 be included in the axis limits?
+
+\end{itemize}
+
+\end{minipage}
+
+
 
 \newpage
 
