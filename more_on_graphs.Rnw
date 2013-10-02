@@ -132,19 +132,18 @@ hi <- me + se
 xd <- 0.2
 xat <- c(1, 2, 3)
 xat <- sort(c(xat - xd, xat + xd))
-par(bg=bgcolor, col="white", col.axis="white", col.lab="white",
-    las=1)
-plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype", yaxt="n",
+par(bg=bgcolor, fg="white", col="white", las=1, col.axis="white",
+    col.lab="white")
+plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
      ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
      xaxs="i", yaxs="i")
 abline(h=pretty(c(lo, hi)), col="gray20")
-axis(side=2, col.ticks="white", col.axis="white", col="white")
-segments(xat, lo, xat, hi, lwd=2, col="white")
-segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2, col="white")
-segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2, col="white")
-segments(xat-xd/4, me, xat+xd/4, me, lwd=2, col="white")
+segments(xat, lo, xat, hi, lwd=2)
+segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2)
+segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2)
+segments(xat-xd/4, me, xat+xd/4, me, lwd=2)
 axis(side=1, at=xat, rep(c("Female", "Male"), 3), cex.axis=0.7,
-     col="white", col.axis="white", col.lab="white")
+     fg="white", col.axis="white")
 axis(side=1, at=1:3, c("AA", "AB", "BB"), col.axis="white",
      tick=FALSE, line=2, cex.axis=1.3)
 
@@ -155,19 +154,16 @@ lo <- me - se
 hi <- me + se
 xd <- 0.2
 xat <- c(0.3, 0.6, 0.9, 1.5, 1.8, 2.1)
-par(bg=bgcolor, col="white", col.axis="white", col.lab="white",
-    las=1)
-plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype", yaxt="n",
+plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
      ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
      xaxs="i", yaxs="i")
 abline(h=pretty(c(lo, hi)), col="gray20")
-axis(side=2, col.ticks="white", col.axis="white", col="white")
-segments(xat, lo, xat, hi, lwd=2, col="white")
-segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2, col="white")
-segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2, col="white")
-segments(xat-xd/4, me, xat+xd/4, me, lwd=2, col="white")
+segments(xat, lo, xat, hi, lwd=2)
+segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2)
+segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2)
+segments(xat-xd/4, me, xat+xd/4, me, lwd=2)
 axis(side=1, at=xat, rep(c("AA", "AB", "BB"), 2),
-     col="white", col.axis="white", col.lab="white")
+     fg="white", col.axis="white")
 axis(side=1, at=c(0.6, 1.8), c("Female", "Male"), col.axis="white",
      tick=FALSE, line=2, cex.axis=1.3)
 @
