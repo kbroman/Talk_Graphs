@@ -598,21 +598,21 @@ par(mfrow=c(1,2), bg=bgcolor, las=1, fg="white",
 plot(0, 0, type="n", xlab="Health care spending (% GDP)",
      ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
      ylim=c(nrow(health), 0)+0.5, yaxs="i")
-for(i in 1:nrow(health))
-  axis(side=2, at=i, health[i,1],
-       col.axis = ifelse(i %% 5 == 0, blue, "white"))
+axis(side=2, at=1:25, health[,1])
 abline(v=seq(5, 15, by=5), col="gray20")
-points(health[,2], 1:25, col = ifelse(1:25 %% 5 == 0, blue, "white"))
+abline(h=seq(5, 25, by=5), col=blue)
+points(health[,2], 1:25, pch=16)
+axis(side=2, at=seq(5, 25, by=5), rep("", 5), col.ticks=blue)
 
 o <- order(health[,2])
 plot(0, 0, type="n", xlab="Health care spending (% GDP)",
      ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
      ylim=c(nrow(health), 0)+0.5, yaxs="i")
-for(i in 1:nrow(health))
-  axis(side=2, at=i, health[o[i],1],
-       col.axis = ifelse(i %% 5 == 0, blue, "white"))
+axis(side=2, at=1:25, health[o,1])
 abline(v=seq(5, 15, by=5), col="gray20")
-points(health[o,2], 1:25, col = ifelse(1:25 %% 5 == 0, blue, "white"))
+abline(h=seq(5, 25, by=5), col=blue)
+points(health[o,2], 1:25, pch=16)
+axis(side=2, at=seq(5, 25, by=5), rep("", 5), col.ticks=blue)
 @
 
 
