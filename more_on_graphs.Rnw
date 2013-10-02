@@ -600,19 +600,19 @@ plot(0, 0, type="n", xlab="Health care spending (% GDP)",
      ylim=c(nrow(health), 0)+0.5, yaxs="i")
 axis(side=2, at=1:25, health[,1])
 abline(v=seq(5, 15, by=5), col="gray20")
-abline(h=seq(5, 25, by=5), col=blue)
+abline(h=seq(1, 25, by=5), col=blue)
 points(health[,2], 1:25, pch=16)
-axis(side=2, at=seq(5, 25, by=5), rep("", 5), col.ticks=blue)
+axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
 
-o <- order(health[,2])
+o <- order(health[,2], decreasing=TRUE)
 plot(0, 0, type="n", xlab="Health care spending (% GDP)",
      ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
      ylim=c(nrow(health), 0)+0.5, yaxs="i")
 axis(side=2, at=1:25, health[o,1])
 abline(v=seq(5, 15, by=5), col="gray20")
-abline(h=seq(5, 25, by=5), col=blue)
+abline(h=seq(1, 25, by=5), col=blue)
 points(health[o,2], 1:25, pch=16)
-axis(side=2, at=seq(5, 25, by=5), rep("", 5), col.ticks=blue)
+axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
 @
 
 
