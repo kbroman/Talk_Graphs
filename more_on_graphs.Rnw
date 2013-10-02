@@ -439,4 +439,88 @@ axis(side=1, at=b, names(gL), col.axis="white", las=1, col="white",
      cex.axis=1.5, tick=FALSE)
 @
 
+
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Encoding data
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{mywhite}
+\hspace{1in} \begin{minipage}[t]{4in}
+\vspace*{0mm}
+
+{\smallsize \color{mypink} Quantities}
+\vspace{5mm}
+
+\begin{itemize}
+\item Position
+\item Length
+\item Angle
+\item Area
+\item Luminance {\color{myblue} (light/dark)}
+\item Chroma {\color{myblue} (amount of color)}
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4in}
+\vspace*{0mm}
+
+{\smallsize \color{mypink} Categories}
+\vspace{5mm}
+
+\begin{itemize}
+\item Shape
+\item Hue {\color{myblue} (which color)}
+\item Texture
+\item Width
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Inspirations
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{mywhite}
+\hspace{0.5in} \begin{minipage}{9.5in}
+
+\begin{itemize}
+\item Hadley Wickham
+{\smallestsize \color{myblue}
+(slides at \verb|http://courses.had.co.nz|)}
+
+\item Naomi Robbins
+{\smallestsize \color{myblue}
+(\emph{Creating more effective graphs})}
+
+\item Howard Wainer
+
+\item Andrew Gelman
+
+\item Edward Tufte
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
 \end{document}
