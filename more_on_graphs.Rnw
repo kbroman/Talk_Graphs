@@ -413,15 +413,14 @@ Don't use areas at all
 \vfill
 
 <<circles_barplot,fig.width=6.5>>=
-par(mar=c(3.1, 5.1, 0.6, 0.6), bg=bgcolor, col="white",
+par(mar=c(3.1, 5.1, 0.6, 0.6), bg=bgcolor, las=1, fg="white",
     col.lab="white", col.axis="white")
 b <- barplot(gL, col=c("lightgreen", "Orchid", "wheat"), ylab="Genome size (Gbp)",
-             ylim=c(0, 18), col.lab="white", yaxs="i", yaxt="n",
-             names.arg=rep("", 3), cex.lab=1.5)
+             ylim=c(0, 18), col.lab="white", yaxs="i", border=c("lightgreen", "Orchid", "wheat"),
+             names.arg=rep("", 3), cex.lab=1.5, cex.axis=1.5)
 u <- par("usr")
 rect(u[1], u[3], u[2], u[4], border="white")
-axis(side=2, col.axis="white", las=1, col="white", cex.axis=1.5)
-axis(side=1, at=b, names(gL), col.axis="white", las=1, col="white",
+axis(side=1, at=b, names(gL), col.axis="white", col="white",
      cex.axis=1.5, tick=FALSE)
 @
 
