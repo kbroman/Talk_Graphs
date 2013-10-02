@@ -541,6 +541,44 @@ hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
 
 \headsize \color{myyellow}
 \hfill
+\begin{minipage}{6.25in}
+\centering
+Use direct labels
+\end{minipage}
+
+\vfill
+
+<<direct_label>>=
+data(iris)
+par(bg=bgcolor, fg="white", col.lab="white", las=1, col.axis="white")
+par(mfrow=c(1, 2))
+green <- rgb(102,254,102,maxColorValue=255)
+yellow <- rgb(255, 255, 102, maxColorValue=255)
+purple <- rgb(203,102,254,maxColorValue=255)
+jitx <- runif(nrow(iris), -0.1, 0.1)
+jity <- runif(nrow(iris), -0.02, 0.02)
+plot(I(Petal.Width + jity) ~ I(Petal.Length + jitx), data=iris,
+     bg=c(blue, green, pink)[as.numeric(Species)],
+     xlab = "Petal length (cm)", ylab="Petal width (cm)", pch=21)
+legend("topleft", levels(iris$Species), pt.bg=c(blue, green, pink),
+       pch=21, col="white")
+
+plot(I(Petal.Width + jity) ~ I(Petal.Length + jitx), data=iris,
+     bg=c(blue, green, pink)[as.numeric(Species)], col="white",
+     xlab = "Petal length (cm)", ylab="Petal width (cm)", pch=21)
+text(2.2,  0.4,  levels(iris$Species)[1], adj=c(0, 0.5), col=blue)
+text(3.25, 1.4,  levels(iris$Species)[2], adj=c(1, 0.5), col=green)
+text(4.7,  2.2,  levels(iris$Species)[3], adj=c(1, 0.5), col=pink)
+@
+
+\newpage
+
+
+
+
+
+\headsize \color{myyellow}
+\hfill
 \begin{minipage}{5.75in}
 \centering
 Inspirations
