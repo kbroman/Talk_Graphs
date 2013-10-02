@@ -51,3 +51,5 @@ more_on_graphs.pdf
 more_on_graphs.tex
 MoreFigs/
 graphs_combined.pdf
+Data/*.R
+Data/*.csv
