@@ -39,3 +39,11 @@ Figs/fig8a.png: R/fig8.R
 Figs/fig9a.png: R/fig9.R
 	cd R;R CMD BATCH fig9.R fig9.Rout
 
+graphs_combined.pdf: graphs.pdf topten.pdf more_on_graphs.pdf
+	pdfjoin graphs.pdf topten.pdf more_on_graphs.pdf -o graphs_combined.pdf
+
+web: graphs.pdf topten.pdf more_on_graphs.pdf graphs_combined.pdf
+	scp graphs.pdf broman-2:public_html/presentations/graphs2013.pdf
+	scp topten.pdf broman-2:public_html/presentations/
+	scp more_on_graphs.pdf broman-2:public_html/presentations/
+	scp graphs_combined.pdf broman-2:public_html/presentations/
