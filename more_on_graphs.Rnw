@@ -476,6 +476,71 @@ Encoding data
 
 \headsize \color{myyellow}
 \hfill
+\begin{minipage}{6.25in}
+\centering
+Ease comparisons
+
+\bigskip
+
+\color{myblue} \smallersize
+(align things vertically)
+\end{minipage}
+
+\vfill
+
+<<histograms>>=
+par(mfrow=c(2,2), bg=bgcolor, fg="white", col="white",
+    col.axis="white", col.lab="white")
+set.seed(85588489)
+fem <- rnorm(600, 64, 2.8)
+mal <- rnorm(600, 68, 2.8)
+jt <- c(fem, mal)
+br <- seq(min(jt), max(jt), len=51)
+hist(fem, breaks=br, yaxt="n", ylab="", main="Women",
+     xlab="Height (in)", col.main=pink)
+hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+@
+
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Ease comparisons
+
+\bigskip
+
+\color{myblue} \smallersize
+(use common axes)
+\end{minipage}
+
+\vfill
+
+<<histograms2>>=
+par(mfcol=c(2,2), bg=bgcolor, fg="white", col="white",
+    col.axis="white", col.lab="white")
+hist(fem, breaks=51, yaxt="n", ylab="", main="Women",
+     xlab="Height (in)", col.main=pink)
+hist(mal, breaks=51, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+hist(fem, breaks=br, yaxt="n", ylab="", main="Women",
+     xlab="Height (in)", col.main=pink)
+hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+@
+
+
+\newpage
+
+
+\headsize \color{myyellow}
+\hfill
 \begin{minipage}{5.75in}
 \centering
 Inspirations
