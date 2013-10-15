@@ -16,7 +16,8 @@ png(file="../Figs/fig6r_a.png", width=1200, height=1000, res=288,
 par(las=1,fg="white",col="white",col.axis="white",col.lab="white",
     bg=bgcolor,mar=c(5.1,4.1,0.1,0.1))
 li <- range(c(before, after))
-plot(before, after-before, xlab="Before",
+ymx <- max(abs(after-before))
+plot(before, after-before, xlab="Before", ylim=c(-ymx, ymx),
      ylab="Change (After - Before)", lwd=2)
 abline(h=0, lty=2, col="cyan")
 dev.off()
