@@ -21,9 +21,9 @@ ym <- apply(y, 1, mean)
 zm <- apply(z, 1, mean)
 
 mygreen <- rgb(173/255, 221/255, 142/255) #rgb(194/255, 230/255, 153/255)
-mylgreen <- rgb(49/255, 163/255, 84/255) #rgb(49/255, 163/255, 84/255)
+mylgreen <- rgb(49/255, 163/255, 84/255, alpha=0.5) #rgb(49/255, 163/255, 84/255)
 myred <- rgb(250/255, 159/255, 181/255)
-mylred <- rgb(197/255, 27/255, 138/255)
+mylred <- rgb(197/255, 27/255, 138/255, alpha=0.5)
 
 #bitmap(file="../Figs/fig9a.bmp", width=6, height=5, res=512,
 #       pointsize=12)
