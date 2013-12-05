@@ -10,7 +10,7 @@ This was inspired by Howard Wainer's article, whose title I stole:
 
 
 A recent PDF is
-[here](http://www.biostat.wisc.edu/~kbroman/presentations/graphs2013.pdf).
+[here](http://www.biostat.wisc.edu/~kbroman/presentations/IowaState2013/graphs_combined.pdf).
 
 A whole bunch of older versions of the slides are at
 [my UW&ndash;Madison webpage](http://www.biostat.wisc.edu/~kbroman/presentations/]),
