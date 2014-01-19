@@ -2,9 +2,10 @@
 
 These are slides for a talk that I will give as part of a [manuscript
 writing workshop](view-source:https://ictr.wisc.edu/SciWritingWorkshop) at the
-[UW Institute for Clinical and Translational Research](http://ictr.wisc.edu).
+[UW Institute for Clinical and Translational Research](http://ictr.wisc.edu)
+on 24 January 2014.
 
-A recent PDF is
+A PDF is
 [here](http://www.biostat.wisc.edu/~kbroman/presentations/ictr2014.pdf).
 
 <hr/>
