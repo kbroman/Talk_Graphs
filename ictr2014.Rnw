@@ -1189,6 +1189,34 @@ axis(side=1, at=1:3, LETTERS[1:3], cex.axis=1.5)
 
 
 
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+A bad table
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[width=8in]{Figs/tableB.png}}
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+An improved table
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[width=8in]{Figs/tableA.png}}
+
+
 \newpage
 
 
@@ -1277,40 +1305,6 @@ Inspirations
 
 
 
-
-\end{document}
-
-
-
-
-
-
-
-\newpage
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-A bad table
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[width=8in]{Figs/tableB.png}}
-
-
-\newpage
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-An improved table
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[width=8in]{Figs/tableA.png}}
 
 \newpage
 
