@@ -2,7 +2,7 @@
 # Figure 5: affy data (replicates)
 ######################################################################
 
-bgcolor <- rgb(0, 0, 98, maxColorValue=255)
+bgcolor <- rgb(0.135, 0.135, 0.135, maxColorValue=1)
 
 load("affydata.RData")
 
