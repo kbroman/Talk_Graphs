@@ -98,6 +98,9 @@ University of Wisconsin -- Madison
 
 \end{center}
 
+\vfill \hfill
+\includegraphics[height=14mm]{Figs/cc-zero.png}
+
 
 \newpage
 
