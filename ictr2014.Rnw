@@ -383,7 +383,7 @@ Show the data
 
 \includegraphics[width=4.5in]{Figs/fig1a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -409,7 +409,7 @@ Show the data
 
 \includegraphics[width=4.5in]{Figs/fig1a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -435,7 +435,7 @@ Show the data
 
 \includegraphics[width=4.5in]{Figs/fig1a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -459,7 +459,7 @@ Avoid pie charts
 
 \includegraphics[width=4.5in]{Figs/fig2a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -485,7 +485,7 @@ Avoid pie charts
 
 \includegraphics[width=4.5in]{Figs/fig2a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -512,7 +512,7 @@ Avoid pie charts
 
 \includegraphics[width=4.5in]{Figs/fig2a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -539,7 +539,7 @@ Consider logs
 
 \includegraphics[width=4.5in]{Figs/fig3a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -564,7 +564,7 @@ Consider logs
 
 \includegraphics[width=4.5in]{Figs/fig3a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
@@ -589,7 +589,7 @@ Consider logs
 
 \includegraphics[width=4.5in]{Figs/fig3a.png}
 \end{minipage}
-\hfill
+\hspace{25mm}
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
