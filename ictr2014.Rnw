@@ -1209,7 +1209,7 @@ A bad table
 \headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
-An improved table
+Fewer digits
 \end{minipage}
 
 \vspace{30mm}

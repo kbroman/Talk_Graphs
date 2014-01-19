@@ -19,5 +19,5 @@ Figs/fig3a.png: R/fig3.R
 Figs/fig5a.png: R/fig5.R
 	cd R;R CMD BATCH fig5.R fig5.Rout
 
-web: ictr2014
-	scp ictr2014.pdf broman-2:public_html/presentations/IowaState2013/
+web: ictr2014.pdf
+	scp ictr2014.pdf broman-2:public_html/presentations/
