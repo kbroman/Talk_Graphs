@@ -1467,7 +1467,7 @@ Turning tables into graphs. The American Statistician 56:121-130
 
 \vspace*{8mm}
 
-\item Robbins NB (2004) Creating more effective graphs. Wiley
+\item NB Robbins (2004) Creating more effective graphs. Wiley
 
 \vspace*{8mm}
 
