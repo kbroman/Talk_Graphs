@@ -1,4 +1,4 @@
-ictr2014.pdf: ictr2014.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png TopTenWorstGraphs/broman_fig1.jpg
+ictr2014.pdf: ictr2014.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg
 	pdflatex ictr2014
 
 ictr2014.tex: ictr2014.Rnw
@@ -18,6 +18,9 @@ Figs/fig3a.png: R/fig3.R
 
 Figs/fig5a.png: R/fig5.R
 	cd R;R CMD BATCH fig5.R fig5.Rout
+
+Figs/fig2a_rev.png: R/fig2.R
+	cd R;R CMD BATCH fig2.R fig2.Rout
 
 web: ictr2014.pdf
 	scp ictr2014.pdf broman-2:public_html/presentations/

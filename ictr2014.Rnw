@@ -460,7 +460,7 @@ Avoid pie charts
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
-\includegraphics[width=4.5in]{Figs/fig2a.png}
+\includegraphics[width=4.5in]{Figs/fig2a_rev.png}
 \end{minipage}
 \hspace{25mm}
 \begin{minipage}[t]{4.5in}
@@ -486,7 +486,7 @@ Avoid pie charts
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
-\includegraphics[width=4.5in]{Figs/fig2a.png}
+\includegraphics[width=4.5in]{Figs/fig2a_rev.png}
 \end{minipage}
 \hspace{25mm}
 \begin{minipage}[t]{4.5in}
@@ -513,7 +513,7 @@ Avoid pie charts
 \begin{minipage}[t]{4.5in}
 \vspace*{0cm}
 
-\includegraphics[width=4.5in]{Figs/fig2a.png}
+\includegraphics[width=4.5in]{Figs/fig2a_rev.png}
 \end{minipage}
 \hspace{25mm}
 \begin{minipage}[t]{4.5in}
