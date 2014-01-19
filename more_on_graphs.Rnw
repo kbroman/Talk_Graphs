@@ -701,6 +701,8 @@ Summary
 
 \item Must 0 be included in the axis limits?
 
+\item Consider taking logs and/or differences
+
 \end{itemize}
 
 \end{minipage}
