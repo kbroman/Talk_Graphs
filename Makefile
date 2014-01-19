@@ -1,13 +1,5 @@
-all: graphs.pdf topten.pdf more_on_graphs.pdf graphs_combined.pdf
-
-graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png
-	pdflatex graphs
-
-topten.pdf: topten.tex TopTenWorstGraphs/broman_fig1.jpg
-	pdflatex topten
-
-more_on_graphs.pdf: more_on_graphs.tex
-	pdflatex more_on_graphs
+ictr2014.pdf: ictr2014.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png TopTenWorstGraphs/broman_fig1.jpg
+	pdflatex ictr2014
 
 more_on_graphs.tex: more_on_graphs.Rnw
 	Rscript -e "library(knitr);knit('more_on_graphs.Rnw')"
@@ -39,8 +31,5 @@ Figs/fig8a.png: R/fig8.R
 Figs/fig9a.png: R/fig9.R
 	cd R;R CMD BATCH fig9.R fig9.Rout
 
-graphs_combined.pdf: graphs.pdf topten.pdf more_on_graphs.pdf
-	pdfjoin graphs.pdf topten.pdf more_on_graphs.pdf -o graphs_combined.pdf
-
-web: graphs_combined.pdf
-	scp graphs_combined.pdf broman-2:public_html/presentations/IowaState2013/
+web: ictr2014
+	scp ictr2014.pdf broman-2:public_html/presentations/IowaState2013/

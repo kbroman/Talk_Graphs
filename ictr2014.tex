@@ -9,6 +9,7 @@
 \usepackage[landscape,pdftex]{geometry}
 \usepackage{fancyhdr}
 \usepackage{wasysym} % for check symbol
+\usepackage{hyperref}
 
 \DeclareOption{bigsym}{\DeclareSymbolFont{largesymbols}{OMX}{psycm}{m}{n}}
 \ProcessOptions
@@ -25,25 +26,20 @@
 \renewcommand{\familydefault}{phv} % helvetica
 
 % following: color
-\definecolor{mybgcolor}{rgb}{0,0,0.3125}
-\definecolor{myyellow}{rgb}{1,1,0.4}
-\definecolor{myblue}{rgb}{0.4,0.8,1}
-\definecolor{mypink}{rgb}{1,0.4,1}
-\definecolor{myhotpink}{rgb}{1,0,0.5}
-\definecolor{mywhite}{rgb}{1,1,1}
-
-% following: B/W
-%\definecolor{mybgcolor}{rgb}{1,1,1}
-%\definecolor{myyellow}{rgb}{0,0,0}
-%\definecolor{myblue}{rgb}{0,0,0}
-%\definecolor{mypink}{rgb}{0,0,0}
-%\definecolor{myhotpink}{rgb}{0,0,0}
-%\definecolor{mywhite}{rgb}{0,0,0}
+\definecolor{bgcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{yellow}{rgb}{1,1,0.4}
+\definecolor{blue}{rgb}{0.4,0.8,1}
+\definecolor{pink}{rgb}{1,0.4,1}
+\definecolor{hotpink}{rgb}{1,0,0.5}
+\definecolor{white}{rgb}{1,1,1}
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+\hypersetup{colorlinks, urlcolor={blue}}
 
 % header/footer layout
 \pagestyle{fancy}
 \lhead{} \chead{} \rhead{}
-\lfoot{} \cfoot{} \rfoot{\color{myyellow} \thepage}
+\lfoot{} \cfoot{} \rfoot{\color{gray} \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -66,41 +62,41 @@
 
 
 
-\pagecolor{mybgcolor}
-\color{mywhite}
+\pagecolor{bgcolor}
+\color{white}
 
 \begin{document}
 
 \thispagestyle{empty}
 
 \begin{center}
-\titlesize \color{myyellow}
+\titlesize \color{yellow}
 
-\vspace*{19.5mm}
+\vspace*{24.5mm}
 
-{\headsize How to display data badly}
+{\headsize Creating effective figures and tables}
 
-\vspace*{19.5mm}
+\vspace*{14.5mm}
 
-\color{mypink}
+\color{pink}
 \rule{10in}{1mm}
 %\vspace{-10mm}
 
 \vspace{10mm}
 
-\textsize \color{myblue}
+\textsize \color{blue}
 Karl W Broman
 \vspace{5mm}
 
-{\smallersize Department of Biostatistics \& Medical Informatics
+{\smallersize Biostatistics \& Medical Informatics
 
 University of Wisconsin -- Madison
 \vspace{20mm}
 
 
-\verb|www.biostat.wisc.edu/~kbroman| \\
-\verb|github.com/kbroman| \\
-\verb|@kwbroman|
+\href{http://www.biostat.wisc.edu/~kbroman}{\tt biostat.wisc.edu/{\textasciitilde}kbroman} \\
+\href{http://github.com/kbroman}{\tt github.com/kbroman} \\
+\href{https://twitter.com/kwbroman}{\tt @kwbroman}
 
 }
 
@@ -109,10 +105,217 @@ University of Wisconsin -- Madison
 
 \newpage
 
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+The top ten worst graphs
+\end{minipage}
+
+\vspace{30mm}
+\smallsize \color{white}
+
+\hspace{0.5in} \begin{minipage}{9in}
+
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+
+With apologizes to the authors, we provide the following list of the
+top ten worst graphs in the scientific literature.
+
+\vspace{15mm}
+
+As these examples indicate, good scientists can make mistakes.
+
+\vspace{35mm}
+
+\hfill \color{blue} \smallersize
+\href{http://bit.ly/TopTenWorstGraphs}{\tt bit.ly/TopTenWorstGraphs}
+
+\end{minipage}
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+10
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/broman_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Broman et al., Am J Hum Genet 63:861-869, 1998, Fig. 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+9
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cotter_fig2.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Cotter et al., J Clin Epidemiol 57:1086-1095, 2004, Fig 2
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+8
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/jorgenson_fig2a.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Jorgenson et al., Am J Hum Genet 76:276-290, 2005, Fig 2
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+7
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/kim_fig1.png}}
+
+\vfill \hfill \smallestsize \color{blue}
+Kim et al., Nutr Res Prac 6:120-125, 2012
+Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+6
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cawley_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Cawley et al., Cell 116:499-509, 2004, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+5
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/hummer_fig4.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Hummer et al., J Virol 75:7774-7777, 2001, Fig 4
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+4
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/epstein_fig1.jpg}}
+
+
+\vfill \hfill \smallestsize \color{blue}
+Epstein and Satten, Am J Hum Genet 73:1316-1329, 2003, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+3
+\end{minipage}
+
+\vspace{30mm}
+
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/mykland_fig1.jpg}}
+\vfill \hfill \smallestsize \color{blue}
+Mykland et al., J Am Stat Asso 90:233-241, 1995, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+2
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/wittke_thompson_fig1CD.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Wittke-Thompson et al., Am J Hum Genet 76:967-986, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+1
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/roeder_fig4.jpg}}
+
+
+\vfill \hfill \smallestsize \color{blue}
+Roeder, Stat Sci 9:222-278, 1994, Fig 4
+
+
+
+\newpage
+
+Sep
+
+
+\newpage
+
 \thispagestyle{empty}
 
 \begin{center}
-\titlesize \color{myyellow}
+\titlesize \color{yellow}
 
 \vspace*{10mm}
 
@@ -121,13 +324,13 @@ obscure your data and \\[2pt]
 annoy your readers}
 
 
-\color{mypink}
+\color{pink}
 \rule{10in}{1mm}
 %\vspace{-10mm}
 
 \vspace{10mm}
 
-\textsize \color{myblue}
+\textsize \color{blue}
 Karl W Broman
 \vspace{5mm}
 
@@ -152,7 +355,7 @@ University of Wisconsin -- Madison
 
 \newpage
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill 
 \begin{minipage}{5.75in}
 \centering
@@ -161,7 +364,7 @@ Inspiration
 
 \vspace{30mm}
 
-\color{mywhite}
+\color{white}
 \smallsize
 
 \hspace{0.5in} \begin{minipage}{9in}
@@ -170,7 +373,7 @@ This lecture was inspired by
 \vspace{10mm}
 
 \hfill \begin{minipage}{8.5in}
-{\smallersize \color{myblue}
+{\smallersize \color{blue}
 H Wainer (1984) How to display data badly. American Statistician
 38(2): 137--147}
 \end{minipage}
@@ -182,20 +385,20 @@ display of data.
 
 \vspace{20mm}
 
-The now widespread use of {\color{mypink} Microsoft Excel} has
+The now widespread use of {\color{pink} Microsoft Excel} has
 resulted in remarkable advances in the field.
 \end{minipage}
 
 \newpage
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 General principles
 \end{minipage}
 
 \vspace{10mm}
-\smallsize \color{mywhite}
+\smallsize \color{white}
 
 \hfill \begin{minipage}[t]{10in}
 The aim of good data graphics:
@@ -204,7 +407,7 @@ The aim of good data graphics:
 
 \hfill \begin{minipage}{9.5in}
 \smallersize
-\color{myblue} Display data accurately and clearly.
+\color{blue} Display data accurately and clearly.
 \end{minipage}
 
 \vspace{30mm}
@@ -214,7 +417,7 @@ Some rules for displaying data badly:
 \vspace{8mm}
 
 \hfill \begin{minipage}{9.6in}
-\color{myblue} \smallersize
+\color{blue} \smallersize
 \begin{itemize}
 \item Display as little information as possible.
 \item Obscure what you do show (with chart junk).
@@ -229,7 +432,7 @@ Some rules for displaying data badly:
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -245,7 +448,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -260,7 +463,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -274,7 +477,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -288,7 +491,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -302,7 +505,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -316,7 +519,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -330,7 +533,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 1
@@ -345,7 +548,7 @@ Example 1
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 2
@@ -361,7 +564,7 @@ Example 2
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 2
@@ -376,7 +579,7 @@ Example 2
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 2
@@ -390,7 +593,7 @@ Example 2
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 2
@@ -404,7 +607,7 @@ Example 2
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 2
@@ -419,7 +622,7 @@ Example 2
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 3
@@ -435,7 +638,7 @@ Example 3
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 3
@@ -450,7 +653,7 @@ Example 3
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 3
@@ -464,7 +667,7 @@ Example 3
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 3
@@ -477,7 +680,7 @@ Example 3
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 4
@@ -493,7 +696,7 @@ Example 4
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 4
@@ -508,7 +711,7 @@ Example 4
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 4
@@ -523,7 +726,7 @@ Example 4
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 5
@@ -539,7 +742,7 @@ Example 5
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 5
@@ -554,7 +757,7 @@ Example 5
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 5
@@ -568,7 +771,7 @@ Example 5
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 5
@@ -582,7 +785,7 @@ Example 5
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 5
@@ -596,7 +799,7 @@ Example 5
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 5
@@ -609,7 +812,7 @@ Example 5
 
 \newpage
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 6
@@ -623,7 +826,7 @@ Example 6
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 6
@@ -637,7 +840,7 @@ Example 6
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 7
@@ -651,7 +854,7 @@ Example 7
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Example 7
@@ -665,14 +868,14 @@ Example 7
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Displaying data well
 \end{minipage}
 
 \vspace{30mm}
-\smallsize \color{mywhite}
+\smallsize \color{white}
 
 \hspace{0.5in} \begin{minipage}[t]{9in}
 \begin{itemize}
@@ -683,7 +886,7 @@ Displaying data well
 
 \item Let the data speak.
 
-{\color{myblue} \smallersize
+{\color{blue} \smallersize
 \begin{itemize}
 \item Show as much information as possible, taking care not to
   obscure the message.
@@ -691,7 +894,7 @@ Displaying data well
 
 \item Science not sales.
 
-{\color{myblue} \smallersize
+{\color{blue} \smallersize
 \begin{itemize}
 \item Avoid unnecessary frills (esp. gratuitous 3d).
 \end{itemize} }
@@ -705,14 +908,14 @@ Displaying data well
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
 Further reading
 \end{minipage}
 
 \vspace{30mm}
-\smallestsize \color{mywhite}
+\smallestsize \color{white}
 
 \hspace{0.5in} \begin{minipage}[t]{9in}
 \begin{itemize}
@@ -740,7 +943,7 @@ Turning tables into graphs. The American Statistician 56:121-130
 
 \vspace*{8mm}
 
-\item Nature Methods columns: {\tt \color{myblue} http://bang.clearscience.info/?p=546}
+\item Nature Methods columns: {\tt \color{blue} http://bang.clearscience.info/?p=546}
 
 \end{itemize}
 \end{minipage}
