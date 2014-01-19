@@ -588,20 +588,6 @@ Consider logs
 
 \vspace{30mm}
 
-\centerline{\includegraphics[height=6in]{Figs/fig5d.png}}
-
-\newpage
-
-\addtocounter{page}{-1}
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-Consider logs
-\end{minipage}
-
-\vspace{30mm}
-
 \centerline{\includegraphics[height=6in]{Figs/fig5b.png}}
 
 \newpage
@@ -1205,7 +1191,6 @@ A bad table
 
 \newpage
 
-
 \headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
 \centering
@@ -1216,6 +1201,71 @@ Fewer digits
 
 \centerline{\includegraphics[width=8in]{Figs/tableA.png}}
 
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Yuck!
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\includegraphics[height=6in]{Figs/lancet_table.pdf}}
+
+\vfill \hfill \smallestsize \color{blue}
+Feigen et al., Lancet 383:245-255, 2014, Table 1
+
+\vspace{5mm}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Yuck!
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\includegraphics[height=6in]{Figs/lancet_table_crop.png}}
+
+\vfill \hfill \smallestsize \color{blue}
+Feigen et al., Lancet 383:245-255, 2014, Table 1
+
+\vspace{5mm}
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+What was wrong with that?
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+
+\hspace{0.5in} \begin{minipage}[t]{9in}
+\begin{itemize}
+
+\itemsep18pt
+
+\item {\color{pink} Way} too many digits.
+
+\item Numbers aren't aligned.
+  
+\item Numbers to be compared aren't anywhere near each other.
+
+\item The interesting comparisons are horizontal rather than
+  vertical.
+
+\item It would be much better as a multi-panel figure.
+\end{itemize} \end{minipage}
 
 \newpage
 
@@ -1230,7 +1280,7 @@ Fewer digits
 Summary
 \end{minipage}
 
-\vspace{30mm}
+\vspace{15mm}
 
 \smallestsize \color{white}
 \hspace{0.5in} \begin{minipage}{9.5in}
@@ -1287,7 +1337,7 @@ Inspirations
 \begin{itemize}
 \item Hadley Wickham
 {\smallestsize \color{blue}
-(slides at \verb|http://courses.had.co.nz|)}
+(slides at \href{http://courses.had.co.nz}{\tt http://courses.had.co.nz})}
 
 \item Naomi Robbins
 {\smallestsize \color{blue}
