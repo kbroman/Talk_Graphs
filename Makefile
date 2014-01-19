@@ -1,8 +1,8 @@
 ictr2014.pdf: ictr2014.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png TopTenWorstGraphs/broman_fig1.jpg
 	pdflatex ictr2014
 
-more_on_graphs.tex: more_on_graphs.Rnw
-	Rscript -e "library(knitr);knit('more_on_graphs.Rnw')"
+ictr2014.tex: ictr2014.Rnw
+	Rscript -e "library(knitr);knit('ictr2014.Rnw')"
 
 TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
 	unzip TopTenWorstGraphs.zip

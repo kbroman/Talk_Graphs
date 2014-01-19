@@ -3,9 +3,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{color}
 \usepackage[landscape,pdftex]{geometry}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
 
 \DeclareOption{bigsym}{\DeclareSymbolFont{largesymbols}{OMX}{psycm}{m}{n}}
 \ProcessOptions
@@ -22,17 +22,20 @@
 \renewcommand{\familydefault}{phv} % helvetica
 
 % following: color
-\definecolor{mybgcolor}{rgb}{0,0,0.3125}
-\definecolor{myyellow}{rgb}{1,1,0.4}
-\definecolor{myblue}{rgb}{0.4,0.8,1}
-\definecolor{mypink}{rgb}{1,0.4,1}
-\definecolor{myhotpink}{rgb}{1,0,0.5}
-\definecolor{mywhite}{rgb}{1,1,1}
+\definecolor{bgcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{yellow}{rgb}{1,1,0.4}
+\definecolor{blue}{rgb}{0.4,0.8,1}
+\definecolor{pink}{rgb}{1,0.4,1}
+\definecolor{hotpink}{rgb}{1,0,0.5}
+\definecolor{white}{rgb}{1,1,1}
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+\hypersetup{colorlinks, urlcolor={blue}}
 
 % header/footer layout
 \pagestyle{fancy}
 \lhead{} \chead{} \rhead{}
-\lfoot{} \cfoot{} \rfoot{\color{myyellow} \thepage}
+\lfoot{} \cfoot{} \rfoot{\color{gray} \thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -54,6 +57,570 @@
 %\renewcommand{\max}{\text{max}}
 
 
+
+\pagecolor{bgcolor}
+\color{white}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\titlesize \color{yellow}
+
+\vspace*{24.5mm}
+
+{\headsize Creating effective figures and tables}
+
+\vspace*{14.5mm}
+
+\color{pink}
+\rule{10in}{1mm}
+%\vspace{-10mm}
+
+\vspace{10mm}
+
+\textsize \color{blue}
+Karl W Broman
+\vspace{5mm}
+
+{\smallersize Biostatistics \& Medical Informatics
+
+University of Wisconsin -- Madison
+\vspace{20mm}
+
+
+\href{http://www.biostat.wisc.edu/~kbroman}{\tt biostat.wisc.edu/{\textasciitilde}kbroman} \\
+\href{http://github.com/kbroman}{\tt github.com/kbroman} \\
+\href{https://twitter.com/kwbroman}{\tt @kwbroman}
+
+}
+
+\end{center}
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+The top ten worst graphs
+\end{minipage}
+
+\vspace{30mm}
+\smallsize \color{white}
+
+\hspace{0.5in} \begin{minipage}{9in}
+
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+
+With apologizes to the authors, we provide the following list of the
+top ten worst graphs in the scientific literature.
+
+\vspace{15mm}
+
+As these examples indicate, good scientists can make mistakes.
+
+\vspace{35mm}
+
+\hfill \color{blue} \smallersize
+\href{http://bit.ly/TopTenWorstGraphs}{\tt bit.ly/TopTenWorstGraphs}
+
+\end{minipage}
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+10
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/broman_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Broman et al., Am J Hum Genet 63:861-869, 1998, Fig. 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+9
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cotter_fig2.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Cotter et al., J Clin Epidemiol 57:1086-1095, 2004, Fig 2
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+8
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/jorgenson_fig2a.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Jorgenson et al., Am J Hum Genet 76:276-290, 2005, Fig 2
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+7
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/kim_fig1.png}}
+
+\vfill \hfill \smallestsize \color{blue}
+Kim et al., Nutr Res Prac 6:120-125, 2012
+Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+6
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cawley_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Cawley et al., Cell 116:499-509, 2004, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+5
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/hummer_fig4.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Hummer et al., J Virol 75:7774-7777, 2001, Fig 4
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+4
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/epstein_fig1.jpg}}
+
+
+\vfill \hfill \smallestsize \color{blue}
+Epstein and Satten, Am J Hum Genet 73:1316-1329, 2003, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+3
+\end{minipage}
+
+\vspace{30mm}
+
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/mykland_fig1.jpg}}
+\vfill \hfill \smallestsize \color{blue}
+Mykland et al., J Am Stat Asso 90:233-241, 1995, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+2
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/wittke_thompson_fig1CD.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Wittke-Thompson et al., Am J Hum Genet 76:967-986, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+1
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/roeder_fig4.jpg}}
+
+
+\vfill \hfill \smallestsize \color{blue}
+Roeder, Stat Sci 9:222-278, 1994, Fig 4
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Displaying data well
+\end{minipage}
+
+\vspace{30mm}
+\smallsize \color{white}
+
+\hspace{0.5in} \begin{minipage}[t]{9in}
+\begin{itemize}
+
+\itemsep24pt
+
+\item Be accurate and clear.
+
+\item Let the data speak.
+
+{\color{blue} \smallersize
+\begin{itemize}
+\item Show as much information as possible, taking care not to
+  obscure the message.
+\end{itemize} }
+
+\item Science not sales.
+
+{\color{blue} \smallersize
+\begin{itemize}
+\item Avoid unnecessary frills (esp. gratuitous 3d).
+\end{itemize} }
+
+\item In tables, every digit should be meaningful. Don't drop ending 0's.
+
+\end{itemize}
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Things not to do
+\end{minipage}
+
+\vspace{35mm}
+\smallsize \color{white}
+
+
+\hfill \begin{minipage}{9.6in}
+\color{white}
+\begin{itemize}
+\itemsep24pt
+\item Display as little information as possible.
+\item Obscure what you do show (with chart junk).
+\item Use pseudo-3d and color gratuitously.
+\item Make a pie chart (preferably in color and 3d).
+\item Use a poorly chosen scale.
+\item Ignore sig figs.
+\end{itemize}
+\end{minipage}
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1c.png}
+\end{minipage}
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1d.png}
+\end{minipage}
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1e.png}
+\end{minipage}
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3b.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3c.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3d.png}
+\end{minipage}
+
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5c.png}}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5d.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5e.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5f.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5d.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5b.png}}
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Take differences
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5a.png}}
+
+
+\newpage
+
+% the rest of this is using knitr
 <<options, echo=FALSE, results="hide">>=
 library(plotrix) # for draw.circle
 opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
@@ -62,52 +629,10 @@ opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
                fig.align="center")
 
 # background colors
-bgcolorpng <- rgb(0, 0, 98, maxColorValue=255)
-bgcolor <- rgb(0, 0, 80, maxColorValue=255)
+bgcolor <- rgb(0.1, 0.1, 0.1, maxColorValue=1)
 @
 
-\pagecolor{mybgcolor}
-\color{mywhite}
-
-\begin{document}
-
-\thispagestyle{empty}
-
-\begin{center}
-\titlesize \color{myyellow}
-
-\vspace*{29.5mm}
-
-{\headsize More on data visualization}
-
-\vspace*{9.5mm}
-
-\color{mypink}
-\rule{10in}{1mm}
-%\vspace{-10mm}
-
-\vspace{10mm}
-
-\textsize \color{myblue}
-Karl W Broman
-\vspace{5mm}
-
-{\smallersize Department of Biostatistics \& Medical Informatics
-
-University of Wisconsin -- Madison
-\vspace{20mm}
-
-
-\verb|www.biostat.wisc.edu/~kbroman|
-}
-
-\end{center}
-
-
-\newpage
-
-
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -115,7 +640,7 @@ Ease comparisons
 
 \bigskip
 
-\color{myblue} \smallersize
+\color{blue} \smallersize
 (things to be compared should be adjacent)
 \end{minipage}
 
@@ -137,7 +662,7 @@ par(bg=bgcolor, fg="white", col="white", las=1, col.axis="white",
 plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
      ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
      xaxs="i", yaxs="i")
-abline(h=pretty(c(lo, hi)), col="gray20")
+abline(h=pretty(c(lo, hi)), col="gray25")
 segments(xat, lo, xat, hi, lwd=2)
 segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2)
 segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2)
@@ -157,7 +682,7 @@ xat <- c(0.3, 0.6, 0.9, 1.5, 1.8, 2.1)
 plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
      ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
      xaxs="i", yaxs="i")
-abline(h=pretty(c(lo, hi)), col="gray20")
+abline(h=pretty(c(lo, hi)), col="gray25")
 segments(xat, lo, xat, hi, lwd=2)
 segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2)
 segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2)
@@ -178,7 +703,7 @@ axis(side=1, at=c(0.6, 1.8), c("Female", "Male"), col.axis="white",
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -186,7 +711,7 @@ Ease comparisons
 
 \bigskip
 
-\color{myblue} \smallersize
+\color{blue} \smallersize
 (add a bit of color)
 \end{minipage}
 
@@ -211,7 +736,7 @@ par(bg=bgcolor, fg="white", col="white", col.axis="white", col.lab="white",
 plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
      ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
      xaxs="i", yaxs="i")
-abline(h=pretty(c(lo, hi)), col="gray20")
+abline(h=pretty(c(lo, hi)), col="gray25")
 segments(xat, lo, xat, hi, lwd=2, col=col)
 segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2, col=col)
 segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2, col=col)
@@ -234,7 +759,7 @@ col <- rep(c(pink, blue), rep(3, 2))
 plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
      ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
      xaxs="i", yaxs="i")
-abline(h=pretty(c(lo, hi)), col="gray20")
+abline(h=pretty(c(lo, hi)), col="gray25")
 segments(xat, lo, xat, hi, lwd=2, col=col)
 segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2, col=col)
 segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2, col=col)
@@ -251,7 +776,7 @@ for(i in 1:2)
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.75in}
 \centering
@@ -341,14 +866,14 @@ pie(ht[o], col=col[o], border="white")
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
 Don't distort the quantities
 
-\color{myblue} \smallsize
-(value $\propto$ {\color{mypink} radius})
+\color{blue} \smallsize
+(value $\propto$ {\color{pink} radius})
 \end{minipage}
 
 \vfill
@@ -371,13 +896,13 @@ text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
 Don't distort the quantities
 
-\color{myblue} \smallsize
+\color{blue} \smallsize
 (value $\propto$ area)
 \end{minipage}
 
@@ -400,13 +925,13 @@ text(4*mult, 4*mult, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
 Don't use areas at all
 
-\color{myblue} \smallsize
+\color{blue} \smallsize
 (value $\propto$ length)
 \end{minipage}
 
@@ -429,7 +954,7 @@ axis(side=1, at=b, names(gL), col.axis="white", col="white",
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{5.75in}
 \centering
@@ -438,11 +963,11 @@ Encoding data
 
 \vspace{30mm}
 
-\smallersize \color{mywhite}
+\smallersize \color{white}
 \hspace{1in} \begin{minipage}[t]{4in}
 \vspace*{0mm}
 
-{\smallsize \color{mypink} Quantities}
+{\smallsize \color{pink} Quantities}
 \vspace{5mm}
 
 \begin{itemize}
@@ -450,8 +975,8 @@ Encoding data
 \item Length
 \item Angle
 \item Area
-\item Luminance {\color{myblue} (light/dark)}
-\item Chroma {\color{myblue} (amount of color)}
+\item Luminance {\color{blue} (light/dark)}
+\item Chroma {\color{blue} (amount of color)}
 \end{itemize}
 
 \end{minipage}
@@ -459,12 +984,12 @@ Encoding data
 \begin{minipage}[t]{4in}
 \vspace*{0mm}
 
-{\smallsize \color{mypink} Categories}
+{\smallsize \color{pink} Categories}
 \vspace{5mm}
 
 \begin{itemize}
 \item Shape
-\item Hue {\color{myblue} (which color)}
+\item Hue {\color{blue} (which color)}
 \item Texture
 \item Width
 \end{itemize}
@@ -474,7 +999,7 @@ Encoding data
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -482,7 +1007,7 @@ Ease comparisons
 
 \bigskip
 
-\color{myblue} \smallersize
+\color{blue} \smallersize
 (align things vertically)
 \end{minipage}
 
@@ -508,7 +1033,7 @@ hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -516,7 +1041,7 @@ Ease comparisons
 
 \bigskip
 
-\color{myblue} \smallersize
+\color{blue} \smallersize
 (use common axes)
 \end{minipage}
 
@@ -539,7 +1064,7 @@ hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -579,7 +1104,7 @@ text(4.7,  2.2,  levels(iris$Species)[3], adj=c(1, 0.5), col=pink)
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -599,7 +1124,7 @@ plot(0, 0, type="n", xlab="Health care spending (% GDP)",
      ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
      ylim=c(nrow(health), 0)+0.5, yaxs="i")
 axis(side=2, at=1:25, health[,1])
-abline(v=seq(5, 15, by=5), col="gray20")
+abline(v=seq(5, 15, by=5), col="gray25")
 abline(h=seq(1, 25, by=5), col=blue)
 points(health[,2], 1:25, pch=16)
 axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
@@ -609,7 +1134,7 @@ plot(0, 0, type="n", xlab="Health care spending (% GDP)",
      ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
      ylim=c(nrow(health), 0)+0.5, yaxs="i")
 axis(side=2, at=1:25, health[o,1])
-abline(v=seq(5, 15, by=5), col="gray20")
+abline(v=seq(5, 15, by=5), col="gray25")
 abline(h=seq(1, 25, by=5), col=blue)
 points(health[o,2], 1:25, pch=16)
 axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
@@ -623,7 +1148,7 @@ axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
 \newpage
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{6.25in}
 \centering
@@ -649,7 +1174,7 @@ text(b, rate+5, paste0(rate, "%"))
 plot(0, 0, type="n", ylim=c(95, 100), yaxs="i",
      xlim=c(0.5, 3.5), xaxt="n", xlab="Method",
      cex.lab=1.5, cex.axis=1.5, ylab="Detection rate (%)")
-abline(h=96:99, col="gray20")
+abline(h=96:99, col="gray25")
 x <- 1:3
 xd <- 0.2
 se <- sqrt(rate*(100-rate)/1000)
@@ -670,7 +1195,7 @@ axis(side=1, at=1:3, LETTERS[1:3], cex.axis=1.5)
 
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{5.75in}
 \centering
@@ -679,11 +1204,17 @@ Summary
 
 \vspace{30mm}
 
-\smallestsize \color{mywhite}
+\smallestsize \color{white}
 \hspace{0.5in} \begin{minipage}{9.5in}
 
 \begin{itemize}
-\itemsep24pt
+\itemsep18pt
+
+\item Show the data
+
+\item Avoid chart junk
+
+\item Consider taking logs and/or differences
 
 \item Put the things to be compared next to each other
 
@@ -713,7 +1244,7 @@ Summary
 
 
 
-\headsize \color{myyellow}
+\headsize \color{yellow}
 \hfill
 \begin{minipage}{5.75in}
 \centering
@@ -722,16 +1253,16 @@ Inspirations
 
 \vspace{30mm}
 
-\smallersize \color{mywhite}
+\smallersize \color{white}
 \hspace{0.5in} \begin{minipage}{9.5in}
 
 \begin{itemize}
 \item Hadley Wickham
-{\smallestsize \color{myblue}
+{\smallestsize \color{blue}
 (slides at \verb|http://courses.had.co.nz|)}
 
 \item Naomi Robbins
-{\smallestsize \color{myblue}
+{\smallestsize \color{blue}
 (\emph{Creating more effective graphs})}
 
 \item Howard Wainer
@@ -745,6 +1276,79 @@ Inspirations
 \end{minipage}
 
 
+
+
+\end{document}
+
+
+
+
+
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+A bad table
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[width=8in]{Figs/tableB.png}}
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+An improved table
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[width=8in]{Figs/tableA.png}}
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Further reading
+\end{minipage}
+
+\vspace{30mm}
+\smallestsize \color{white}
+
+\hspace{0.5in} \begin{minipage}[t]{9in}
+\begin{itemize}
+
+\itemsep12pt
+
+\item ER Tufte (1983) The visual display of quantitative information.
+Graphics Press.
+\item ER Tufte (1990) Envisioning information. Graphics Press.
+\item ER Tufte (1997) Visual explanations. Graphics Press.
+
+\vspace*{8mm}
+
+\item A Gelman, C Pasarica, R Dodhia (2002) Let's practice what we preach:
+Turning tables into graphs. The American Statistician 56:121-130
+
+\vspace*{8mm}
+
+\item Robbins NB (2004) Creating more effective graphs. Wiley
+
+\vspace*{8mm}
+
+\item Nature Methods columns: \href{http://bang.clearscience.info/?p=546}{\tt http://bang.clearscience.info/?p=546}
+
+\end{itemize}
+\end{minipage}
 
 
 \end{document}
