@@ -443,9 +443,88 @@ Show the data
 \end{minipage}
 
 
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2c.png}
+\end{minipage}
+
+
+
 
 \newpage
 
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2d.png}
+\end{minipage}
+
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2a.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2e.png}
+\end{minipage}
+
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
 
 \headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
