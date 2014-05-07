@@ -9,9 +9,11 @@ png(file="../Figs/fig2a_rev.png", width=1200, height=1000, res=288,
 par(las=1,fg="white",col="white",col.axis="white",col.lab="white",
     bg=bgcolor,mar=c(4.1,4.1,1.1,0.1))
 
-z <- barplot(dat, las=1, col="slateblue", border="white",
+library(broman)
+blue <- brocolors("crayons")["Cornflower"]
+z <- barplot(dat, las=1, col=blue, border="white",
              ylim=c(0, 50), ylab="Usage (percent)", space=0.5)
 abline(h=seq(10,40, by=10), col="gray30")
-rect(z-0.5, 0, z+0.5, dat, col="slateblue", border="white")
+rect(z-0.5, 0, z+0.5, dat, col=blue, border="white")
 u <- par("usr"); rect(u[1], u[3], u[2], u[4], xpd=TRUE)
 dev.off()
