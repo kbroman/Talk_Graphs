@@ -40,6 +40,20 @@ Also see the [combined pdf](http://www.biostat.wisc.edu/~kbroman/presentations/g
 
 <hr/>
 
+The
+[iowastate2013](https://github.com/kbroman/Talk_Graphs/tree/iowastate2013)
+branch contains a version I gave (remotely) to the Graphics Working
+Group in the [Department of Statistics](http://www.stat.iastate.edu/),
+[Iowa State University](http://www.iastate.edu/).
+
+The [ictr2014](https://github.com/kbroman/Talk_Graphs/tree/ictr2014)
+branch contains a version I gave in a manuscript writing workshop for
+the
+[Institute for Clinical and Translational Research](http://ictr.wisc.edu/), 
+[University of Wisconsin-Madison](http://www.wisc.edu).
+
+<hr/>
+
 To the extent possible under law,
 [Karl Broman](http://github.com/kbroman)
 has waived all copyright and related or neighboring rights to
