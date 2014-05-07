@@ -29,9 +29,13 @@ axis(side=1,at=c(1,2),labels=c("Treatment","Control"))
 #se <- c(sem(x),sem(y))
 me <- c(mean(x),mean(y))
 ci <- cbind(t.test(x)$conf.int, t.test(y)$conf.int)
-segments(c(1.2,1.8),me,c(1.3,1.7),me,lwd=2,col="cyan")
-segments(c(1.25,1.75),ci[1,],c(1.25,1.75),ci[2,],lwd=2,col="cyan")
-segments(c(1.225,1.775),ci[1,],c(1.275,1.725),ci[1,],lwd=2,col="cyan")
-segments(c(1.225,1.775),ci[2,],c(1.275,1.725),ci[2,],lwd=2,col="cyan")
+
+library(broman)
+cicolor <- brocolors("crayons")["Cornflower"]
+
+segments(c(1.2,1.8),me,c(1.3,1.7),me,lwd=2,col=cicolor)
+segments(c(1.25,1.75),ci[1,],c(1.25,1.75),ci[2,],lwd=2,col=cicolor)
+segments(c(1.225,1.775),ci[1,],c(1.275,1.725),ci[1,],lwd=2,col=cicolor)
+segments(c(1.225,1.775),ci[2,],c(1.275,1.725),ci[2,],lwd=2,col=cicolor)
 dev.off()
 
