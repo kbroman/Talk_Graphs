@@ -3,7 +3,7 @@ all: graphs_cmp2014.pdf
 graphs_cmp2014.pdf: graphs.pdf more_on_graphs.pdf
 	pdfjoin graphs.pdf more_on_graphs.pdf -o graphs_cmp2014.pdf
 
-graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png
+graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png Figs/fig2a_rev.png
 	pdflatex graphs
 
 topten.pdf: topten.tex TopTenWorstGraphs/broman_fig1.jpg
@@ -23,6 +23,9 @@ TopTenWorstGraphs.zip:
 
 Figs/fig1a.png: R/fig1.R
 	cd R;R CMD BATCH fig1.R fig1.Rout
+
+Figs/fig2a_rev.png: R/fig2.R
+	cd R;R CMD BATCH fig2.R fig2.Rout
 
 Figs/fig3a.png: R/fig3.R
 	cd R;R CMD BATCH fig3.R fig3.Rout
