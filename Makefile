@@ -1,4 +1,7 @@
-all: graphs.pdf topten.pdf more_on_graphs.pdf graphs_combined.pdf
+all: graphs_cmp2014.pdf
+
+graphs_cmp2014.pdf: graphs.pdf more_on_graphs.pdf
+	pdfjoin graphs.pdf more_on_graphs.pdf -o graphs_cmp2014.pdf
 
 graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png
 	pdflatex graphs
@@ -38,9 +41,6 @@ Figs/fig8a.png: R/fig8.R
 
 Figs/fig9a.png: R/fig9.R
 	cd R;R CMD BATCH fig9.R fig9.Rout
-
-graphs_combined.pdf: graphs.pdf topten.pdf more_on_graphs.pdf
-	pdfjoin graphs.pdf topten.pdf more_on_graphs.pdf -o graphs_combined.pdf
 
 web: graphs.pdf topten.pdf more_on_graphs.pdf graphs_combined.pdf
 	scp graphs.pdf broman-2:public_html/presentations/graphs2013.pdf
