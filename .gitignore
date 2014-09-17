@@ -54,3 +54,5 @@ graphs_combined.pdf
 Data/*.R
 Data/*.csv
 graphs_cmp2014.pdf
+graphs.out
+more_on_graphs.out

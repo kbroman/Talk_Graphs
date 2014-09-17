@@ -9,9 +9,13 @@
 \usepackage[landscape,pdftex]{geometry}
 \usepackage{fancyhdr}
 \usepackage{wasysym} % for check symbol
+\usepackage{hyperref}
 
 \DeclareOption{bigsym}{\DeclareSymbolFont{largesymbols}{OMX}{psycm}{m}{n}}
 \ProcessOptions
+
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+\hypersetup{colorlinks, urlcolor={white}}
 
 \setlength{\oddsidemargin}{-0.75in}
 \setlength{\evensidemargin}{-0.75in}
@@ -92,17 +96,21 @@
 Karl W Broman
 \vspace{5mm}
 
-{\smallersize Department of Biostatistics \& Medical Informatics
+{\smallersize Biostatistics \& Medical Informatics
 
 University of Wisconsin -- Madison
 \vspace{20mm}
 
 
-\verb|www.biostat.wisc.edu/~kbroman| 
+\href{http://kbroman.org}{\tt kbroman.org} \\[5pt]
+\href{https://github.com/kbroman}{\tt github.com/kbroman} \\[-5pt]
+\href{https://twitter.com/kwbroman}{\tt @kwbroman}
 }
 
 \end{center}
 
+\vfill \hfill
+\href{http://creativecommons.org/publicdomain/zero/1.0/}{\includegraphics[height=14mm]{Figs/cc-zero.png}}
 
 \newpage
 
@@ -128,20 +136,21 @@ annoy your readers}
 Karl W Broman
 \vspace{5mm}
 
-{\smallersize Department of Biostatistics \& Medical Informatics
+{\smallersize Biostatistics \& Medical Informatics
 
 University of Wisconsin -- Madison
 \vspace{20mm}
 
 
-\verb|www.biostat.wisc.edu/~kbroman| 
+\href{http://kbroman.org}{\tt kbroman.org} \\[5pt]
+\href{https://github.com/kbroman}{\tt github.com/kbroman} \\[-5pt]
+\href{https://twitter.com/kwbroman}{\tt @kwbroman}
 }
 
 \end{center}
 
-
-
-
+\vfill \hfill
+\href{http://creativecommons.org/publicdomain/zero/1.0/}{\includegraphics[height=14mm]{Figs/cc-zero.png}}
 
 \newpage
 
