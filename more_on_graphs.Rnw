@@ -712,40 +712,45 @@ Summary
 \newpage
 
 
-
-
-
 \headsize \color{myyellow}
-\hfill
-\begin{minipage}{5.75in}
+\hfill \begin{minipage}{5.75in}
 \centering
-Inspirations
+Further reading
 \end{minipage}
 
 \vspace{30mm}
+\smallestsize \color{mywhite}
 
-\smallersize \color{mywhite}
-\hspace{0.5in} \begin{minipage}{9.5in}
-
+\hspace{0.5in} \begin{minipage}[t]{9in}
 \begin{itemize}
-\item Hadley Wickham
-{\smallestsize \color{myblue}
-(slides at \verb|http://courses.had.co.nz|)}
 
-\item Naomi Robbins
-{\smallestsize \color{myblue}
-(\emph{Creating more effective graphs})}
+\itemsep12pt
 
-\item Howard Wainer
+\item ER Tufte (1983) The visual display of quantitative information.
+Graphics Press.
+\item ER Tufte (1990) Envisioning information. Graphics Press.
+\item ER Tufte (1997) Visual explanations. Graphics Press.
 
-\item Andrew Gelman
+\vspace*{8mm}
 
-\item Edward Tufte
+\item WS Cleveland (1993) Visualizing data. Hobart Press.
+\item WS Cleveland (1994) The elements of graphing data. CRC Press.
+
+\vspace*{8mm}
+
+\item A Gelman, C Pasarica, R Dodhia (2002) Let's practice what we preach:
+Turning tables into graphs. The American Statistician 56:121-130
+
+\vspace*{8mm}
+
+\item NB Robbins (2004) Creating more effective graphs. Wiley
+
+\vspace*{8mm}
+
+\item Nature Methods columns: {\tt \color{myblue} http://bang.clearscience.info/?p=546}
 
 \end{itemize}
-
 \end{minipage}
-
 
 
 
