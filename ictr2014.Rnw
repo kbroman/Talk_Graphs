@@ -89,7 +89,7 @@ University of Wisconsin -- Madison
 \vspace{20mm}
 
 
-\href{http://www.biostat.wisc.edu/~kbroman}{\tt biostat.wisc.edu/{\textasciitilde}kbroman} \\
+\href{http://kbroman.org}{\tt kbroman.org} \\
 \href{http://github.com/kbroman}{\tt github.com/kbroman} \\
 \href{https://twitter.com/kwbroman}{\tt @kwbroman}
 
@@ -1142,7 +1142,7 @@ What was wrong with that?
 \item {\color{pink} Way} too many digits.
 
 \item Numbers aren't aligned.
-  
+
 \item Numbers to be compared aren't anywhere near each other.
 
 \item The interesting comparisons are horizontal rather than
