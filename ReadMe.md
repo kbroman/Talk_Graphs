@@ -38,7 +38,7 @@ with further advice on developing data visualizations. [[pdf here](http://www.bi
 
 Also see the [combined pdf](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_combined.pdf).
 
-<hr/>
+---
 
 The
 [iowastate2013](https://github.com/kbroman/Talk_Graphs/tree/iowastate2013)
@@ -49,10 +49,15 @@ Group in the [Department of Statistics](http://www.stat.iastate.edu/),
 The [ictr2014](https://github.com/kbroman/Talk_Graphs/tree/ictr2014)
 branch contains a version I gave in a manuscript writing workshop for
 the
-[Institute for Clinical and Translational Research](http://ictr.wisc.edu/), 
+[Institute for Clinical and Translational Research](http://ictr.wisc.edu/),
 [University of Wisconsin-Madison](http://www.wisc.edu).
 
-<hr/>
+The [cmp2014](https://github.com/kbroman/Talk_Graphs/tree/cmp2014)
+branch contains a version I gave to the
+[Dept of Pathology and Laboratory Medicine](http://www.pathology.wisc.edu/)
+at UW-Madison.
+
+---
 
 To the extent possible under law,
 [Karl Broman](http://github.com/kbroman)
