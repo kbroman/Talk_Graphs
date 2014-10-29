@@ -400,7 +400,7 @@ Avoid pie charts
 \vspace{18mm}
 
 <<piecharts, fig.height=6, fig.width=8>>=
-x <- list(16:20, c(20,20,19,21,20))
+x <- list(18:22, c(20,20,19,21,20))
 for(i in 1:2) names(x[[i]]) <- LETTERS[seq(along=x[[i]])]
 
 par(bg=bgcolor, fg="white")
@@ -425,8 +425,6 @@ Avoid pie charts
 \vspace{18mm}
 
 <<piecharts_3d, fig.height=6, fig.width=8>>=
-x <- list(16:20, c(20,20,19,21,20))
-
 par(bg=bgcolor, fg="white")
 par(mar=rep(1.1, 4))
 par(mfrow=c(2,2))
@@ -461,7 +459,8 @@ for(i in 1:2)
           mar=rep(1,4), labelcex=1)
 par(mar=c(6.1, 4.1, 1.1, 1.1))
 for(i in 1:2)
-    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1)
+    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1,
+            ylim=c(0, 22))
 @
 
 \hfill \smallestsize \color{blue}
@@ -489,7 +488,8 @@ for(i in 1:2)
   pie(x[[i]], LETTERS[1:5], col=brewer.pal(5, "Set2"))
 par(mar=c(6.1, 4.1, 1.1, 1.1))
 for(i in 1:2)
-    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1)
+    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1,
+            ylim=c(0, 22))
 @
 
 \hfill \smallestsize \color{blue}
