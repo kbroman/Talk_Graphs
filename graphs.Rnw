@@ -1358,6 +1358,22 @@ One last example
 
 \newpage
 
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+An alternative
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\includegraphics{Crashes/crashes.pdf}}
+
+
+
+
+\newpage
+
 
 
 \headsize \color{yellow}

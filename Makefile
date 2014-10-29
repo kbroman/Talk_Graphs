@@ -1,4 +1,4 @@
-graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg
+graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg Crashes/crashes.pdf
 	pdflatex graphs
 
 graphs.tex: graphs.Rnw
@@ -21,6 +21,9 @@ Figs/fig5a.png: R/fig5.R
 
 Figs/fig2a_rev.png: R/fig2.R
 	cd R;R CMD BATCH fig2.R fig2.Rout
+
+Crashes/crashes.pdf: Crashes/plot.R Crashes/data.R
+	cd $(<D);R CMD BATCH $(<F)
 
 web: graphs.pdf
 	scp graphs.pdf broman-2:public_html/presentations/graphs_MDPhD2014.pdf
