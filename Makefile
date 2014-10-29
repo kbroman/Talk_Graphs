@@ -29,4 +29,4 @@ Crashes/crashes_scatter.pdf: Crashes/scatterplots.R Crashes/data.R
 	cd $(<D);R CMD BATCH $(<F)
 
 web: graphs.pdf
-	scp graphs.pdf broman-2:public_html/presentations/graphs_MDPhD2014.pdf
+	scp graphs.pdf broman-2.biostat.wisc.edu:public_html/presentations/graphs_MDPhD2014.pdf
