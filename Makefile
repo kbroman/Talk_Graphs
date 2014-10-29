@@ -1,8 +1,8 @@
-ictr2014.pdf: ictr2014.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg
-	pdflatex ictr2014
+graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg
+	pdflatex graphs
 
-ictr2014.tex: ictr2014.Rnw
-	Rscript -e "library(knitr);knit('ictr2014.Rnw')"
+graphs.tex: graphs.Rnw
+	Rscript -e "library(knitr);knit('graphs.Rnw')"
 
 TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
 	unzip TopTenWorstGraphs.zip
@@ -22,5 +22,5 @@ Figs/fig5a.png: R/fig5.R
 Figs/fig2a_rev.png: R/fig2.R
 	cd R;R CMD BATCH fig2.R fig2.Rout
 
-web: ictr2014.pdf
-	scp ictr2014.pdf broman-2:public_html/presentations/
+web: graphs.pdf
+	scp graphs.pdf broman-2:public_html/presentations/
