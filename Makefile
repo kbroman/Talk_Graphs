@@ -1,7 +1,5 @@
-graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg Crashes/crashes.pdf Crashes/crashes_scatter.pdf 538figs
+graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg Crashes/crashes.pdf Crashes/crashes_scatter.pdf Crashes/Figs/chalabi-dearmona-distracted.png Crashes/Figs/chalabi-dearmona-speeding.png Crashes/Figs/chalabi-dearmona-drinking.png
 	pdflatex graphs
-
-.PHONY: 538figs
 
 graphs.tex: graphs.Rnw
 	Rscript -e "library(knitr);knit('graphs.Rnw')"
@@ -33,8 +31,6 @@ Crashes/crashes_scatter.pdf: Crashes/scatterplots.R Crashes/data.R
 web: graphs.pdf
 	scp graphs.pdf broman-2.biostat.wisc.edu:public_html/presentations/graphs_MDPhD2014.pdf
 
-538figs: Crashes/Figs/chalabi-dearmona-distracted.png Crashes/Figs/chalabi-dearmona-speeding.png Crashes/Figs/chalabi-dearmona-drinking.png
-
 Crashes/Figs/%.png:
-	cd $(@D);wget https://espnfivethirtyeight.files.wordpress.com/2014/10/$(@F)
+	cd $(@D);wget 'https://espnfivethirtyeight.files.wordpress.com/2014/10/$(@F)'
 	touch $@
