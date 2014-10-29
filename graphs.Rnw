@@ -21,6 +21,21 @@
 
 \renewcommand{\familydefault}{phv} % helvetica
 
+% knitr options
+<<options, echo=FALSE, results="hide">>=
+library(plotrix) # for draw.circle
+library(RColorBrewer)
+library(broman) # for colors
+opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
+               fig.path="MoreFigs/", verbose=TRUE,
+               fig.height=6.5, fig.width=10,
+               fig.align="center")
+
+# background colors
+bgcolor <- rgb(0.1, 0.1, 0.1, maxColorValue=1)
+@
+
+
 % following: color
 \definecolor{bgcolor}{rgb}{0.1,0.1,0.1}
 \definecolor{yellow}{rgb}{1,1,0.4}
@@ -372,12 +387,119 @@ Avoid pie charts
 \includegraphics[width=4.5in]{Figs/fig2e.png}
 \end{minipage}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts, fig.height=6, fig.width=8>>=
+x <- list(16:20, c(20,20,19,21,20))
+for(i in 1:2) names(x[[i]]) <- LETTERS[seq(along=x[[i]])]
+
+par(bg=bgcolor, fg="white")
+par(mar=rep(1.1, 4))
+par(mfrow=c(2,2))
+for(i in 1:2)
+  pie(x[[i]], LETTERS[1:5], col=brewer.pal(5, "Set2"))
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts_3d, fig.height=6, fig.width=8>>=
+x <- list(16:20, c(20,20,19,21,20))
+
+par(bg=bgcolor, fg="white")
+par(mar=rep(1.1, 4))
+par(mfrow=c(2,2))
+for(i in 1:2)
+    pie3D(x[[i]], labels=LETTERS[1:5], explode=0.1, col=brewer.pal(5, "Set2"),
+          mar=rep(1,4), labelcex=1)
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
 
 
 \newpage
 
 \addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts_3d_w_bars, fig.height=6, fig.width=8>>=
+par(bg=bgcolor, fg="white", col.axis="white")
+par(mfrow=c(2,2))
+par(mar=rep(1.1, 4))
+for(i in 1:2)
+    pie3D(x[[i]], labels=LETTERS[1:5], explode=0.1, col=brewer.pal(5, "Set2"),
+          mar=rep(1,4), labelcex=1)
+par(mar=c(6.1, 4.1, 1.1, 1.1))
+for(i in 1:2)
+    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1)
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts_w_bars, fig.height=6, fig.width=8>>=
+par(bg=bgcolor, fg="white", col.axis="white")
+par(mfrow=c(2,2))
+par(mar=rep(1.1, 4))
+for(i in 1:2)
+  pie(x[[i]], LETTERS[1:5], col=brewer.pal(5, "Set2"))
+par(mar=c(6.1, 4.1, 1.1, 1.1))
+for(i in 1:2)
+    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1)
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 
 \headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
@@ -539,18 +661,6 @@ Take differences
 
 \newpage
 
-% the rest of this is using knitr
-<<options, echo=FALSE, results="hide">>=
-library(plotrix) # for draw.circle
-library(broman) # for colors
-opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
-               fig.path="MoreFigs/", verbose=TRUE,
-               fig.height=6.5, fig.width=10,
-               fig.align="center")
-
-# background colors
-bgcolor <- rgb(0.1, 0.1, 0.1, maxColorValue=1)
-@
 
 \headsize \color{yellow}
 \hfill
