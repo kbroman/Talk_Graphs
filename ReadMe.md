@@ -1,12 +1,10 @@
 ## Talk on &ldquo;Creating effective figures and tables&rdquo;
 
-These are slides for a talk that I will give as part of a [manuscript
-writing workshop](https://ictr.wisc.edu/SciWritingWorkshop) at the
-[UW Institute for Clinical and Translational Research](http://ictr.wisc.edu)
-on 24 January 2014.
+These are slides for a talk that I will give on 29 Oct 2014, for MD-PhD students in a
+seminar course led by [Caitlin Pepperell](http://labs.medmicro.wisc.edu/pepperell/).
 
 A PDF is
-[here](http://www.biostat.wisc.edu/~kbroman/presentations/ictr2014.pdf).
+[here](http://www.biostat.wisc.edu/~kbroman/presentations/MDPhD2014.pdf).
 
 <hr/>
 

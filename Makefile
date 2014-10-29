@@ -23,4 +23,4 @@ Figs/fig2a_rev.png: R/fig2.R
 	cd R;R CMD BATCH fig2.R fig2.Rout
 
 web: graphs.pdf
-	scp graphs.pdf broman-2:public_html/presentations/
+	scp graphs.pdf broman-2:public_html/presentations/graphs_MDPhD2014.pdf
