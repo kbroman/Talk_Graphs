@@ -141,31 +141,6 @@ Displaying data well
 \end{minipage}
 
 
-\newpage
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-Things not to do
-\end{minipage}
-
-\vspace{35mm}
-\smallsize \color{white}
-
-
-\hfill \begin{minipage}{9.6in}
-\color{white}
-\begin{itemize}
-\itemsep24pt
-\item Display as little information as possible.
-\item Obscure what you do show (with chart junk).
-\item Use pseudo-3d and color gratuitously.
-\item Make a pie chart (preferably in color and 3d).
-\item Use a poorly chosen scale.
-\item Ignore sig figs.
-\end{itemize}
-\end{minipage}
-
 
 
 \newpage
@@ -246,6 +221,82 @@ Show the data
 
 \newpage
 
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1f.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1g.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1h.png}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
 
 \headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
@@ -272,6 +323,7 @@ Avoid pie charts
 
 \newpage
 
+\addtocounter{page}{-1}
 
 \headsize \color{yellow}
 \hfill \begin{minipage}{5.75in}
@@ -398,6 +450,7 @@ Consider logs
 \end{minipage}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \newpage
