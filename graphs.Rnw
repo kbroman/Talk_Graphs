@@ -1370,6 +1370,20 @@ An alternative
 \centerline{\includegraphics{Crashes/crashes.pdf}}
 
 
+\newpage
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Scatterplots
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\includegraphics{Crashes/crashes_scatter.pdf}}
+
+
 
 
 \newpage
