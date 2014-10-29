@@ -1316,7 +1316,47 @@ What was wrong with that?
 
 \newpage
 
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+One last example
+\end{minipage}
 
+\vspace{0mm}
+
+\begin{center}
+\begin{minipage}[t]{2.5in}
+
+  \vspace*{0mm}
+
+\centerline{\includegraphics[height=6.2in]{Crashes/Figs/chalabi-dearmona-distracted.png}}
+
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}[t]{2.5in}
+
+  \vspace*{0mm}
+
+\centerline{\includegraphics[height=6.2in]{Crashes/Figs/chalabi-dearmona-speeding.png}}
+
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}[t]{2.5in}
+
+\vspace*{0mm}
+
+\centerline{\includegraphics[height=6.2in]{Crashes/Figs/chalabi-dearmona-drinking.png}}
+
+
+\end{minipage}
+\end{center}
+
+
+\hfill \smallestsize \color{blue}
+\href{http://fivethirtyeight.com/datalab/which-state-has-the-worst-drivers/}{\tt fivethirtyeight.com/datalab/which-state-has-the-worst-drivers}
+
+\newpage
 
 
 
@@ -1324,12 +1364,12 @@ What was wrong with that?
 \hfill
 \begin{minipage}{5.75in}
 \centering
-Summary
+Summary I
 \end{minipage}
 
-\vspace{15mm}
+\vspace{30mm}
 
-\smallestsize \color{white}
+\smallersize \color{white}
 \hspace{0.5in} \begin{minipage}{9.5in}
 
 \begin{itemize}
@@ -1347,6 +1387,30 @@ Summary
 
 \item Use position rather than angle or area to represent quantities
 
+\end{itemize}
+
+\end{minipage}
+
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Summary II
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+\hspace{0.5in} \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+
 \item Align things vertically to ease comparisons
 
 \item Use common axis limits to ease comparisons
@@ -1357,10 +1421,11 @@ Summary
 
 \item Must 0 be included in the axis limits?
 
+\item Use scatterplots to explore relationships
+
 \end{itemize}
 
 \end{minipage}
-
 
 
 \newpage
