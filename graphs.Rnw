@@ -1489,6 +1489,8 @@ Inspirations
 
 \item Andrew Gelman
 
+\item Dan Carr
+
 \item Edward Tufte
 
 \end{itemize}
