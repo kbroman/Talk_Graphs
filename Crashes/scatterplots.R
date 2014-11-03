@@ -1,5 +1,6 @@
 library(broman)
-source("data.R")
+source("proper_data.R")
+
 pdf("crashes_scatter.pdf", height=6.5, width=10, pointsize=14)
 par(mfrow=c(2,3), bg="white")
 
