@@ -60,7 +60,7 @@ dev.off()
 
 f <- function(a,x,y,p=0.5) mean(x<=a & y<=a)-p
 a50 <- uniroot(f,lower=40,upper=42,x=r,y=g,p=0.5)$root
-a99 <- uniroot(f,lower=336,upper=337,x=r,y=g,p=0.95)$root
+a95 <- uniroot(f,lower=336,upper=337,x=r,y=g,p=0.95)$root
 
 #bitmap(file="../Figs/fig5e.bmp", width=6, height=5, res=288,
 #       pointsize=12)
@@ -85,7 +85,7 @@ plot(r,g,lwd=2,cex=0.2,pch=16,
      xlab=expression(R[1]),ylab="")
 mtext(side=2,expression(R[2]),line=4)
 abline(a50,-1,lwd=2,col="hotpink")
-abline(a99,-1,lwd=2,col="cyan")
-text(1800,0,"99%",col="cyan",cex=1.2,adj=c(0,0))
+abline(a95,-1,lwd=2,col="cyan")
+text(1800,0,"95%",col="cyan",cex=1.2,adj=c(0,0))
 dev.off()
 
