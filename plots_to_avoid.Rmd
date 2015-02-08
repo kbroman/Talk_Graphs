@@ -34,8 +34,6 @@ The aims of good data graphics is to display data accurately and clearly. Some r
 *  Ignore significant figures.
 
 
-
-
 ## Piecharts
 
 ```{r,include=FALSE}
@@ -290,6 +288,35 @@ precision? This can be easily remedied:
 ```{r}
 round(heights,1)
 ```
+
+# Displaying data well
+
+In general you should follow these principles:
+* Be accurate and clear.
+* Let the data speak.
+* Show as much information as possible, taking care not to obscure the message.
+* Science not sales.
+* Avoid unnecessary frills (esp. gratuitous 3d).
+* In tables, every digit should be meaningful. Don't drop ending 0's.
+
+Some further reading:
+
+* ER Tufte (1983) The visual display of quantitative information.
+Graphics Press.
+* ER Tufte (1990) Envisioning information. Graphics Press.
+*  ER Tufte (1997) Visual explanations. Graphics Press.
+
+* WS Cleveland (1993) Visualizing data. Hobart Press.
+* WS Cleveland (1994) The elements of graphing data. CRC Press.
+
+* A Gelman, C Pasarica, R Dodhia (2002) Let's practice what we preach:
+Turning tables into graphs. The American Statistician 56:121-130
+* NB Robbins (2004) Creating more effective graphs. Wiley
+* [Nature Methods columns](http://bang.clearscience.info/?p=546) 
+
+
+
+\end{document}
 
 
 
