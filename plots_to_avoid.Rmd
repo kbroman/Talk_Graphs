@@ -78,7 +78,7 @@ The reason is that by removing the center we remove one of the visual cues for d
 
 ##  Barplots as data summaries
 
-While barplots are useful for showing percentages, they are incorrrectly used to display data from two groups begin compared. Specifically, barplots are created with height equal to the group means and an antenna is added at the top to represent standard errors. This plot is simply showing two numbers per groups and the plot adds nothing:
+While barplots are useful for showing percentages, they are incorrectly used to display data from two groups begin compared. Specifically, barplots are created with height equal to the group means and an antenna is added at the top to represent standard errors. This plot is simply showing two numbers per groups and the plot adds nothing:
 
 <center>
 <img src="Figs/fig1c.png" width=400>
