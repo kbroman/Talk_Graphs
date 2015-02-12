@@ -87,7 +87,11 @@ While barplots are useful for showing percentages, they are incorrectly used to 
 Much more informative is to summarizing with a boxplot. If the number of points is small enough, we might as well add them to the plot. When the number of points is too large for us to see them, just showing a boxplot is preferable.
 
 ```{r, fig.align="center",fig.width=4,fig.height=4}
-load("R/fig1.RData")
+library("downloader")
+tmpfile <- tempfile()
+download("https://github.com/kbroman/Talk_Graphs/raw/master/R/fig1.RData",tmpfile)
+load(tmpfile)
+
 library(rafalib)
 mypar2(1,1)
 dat <- list(Treatment=x,Control=y)
@@ -106,7 +110,8 @@ This problem is magnified when our data has outliers or very large tails. Note t
 A quick look at the data demonstrates that this difference is mostly driven by just two points. A version showing the data in the log-scale is much more informative.
 
 ```{r, fig.align="center",fig.width=7,fig.height=4}
-load("R/fig3.RData")
+download("https://github.com/kbroman/Talk_Graphs/raw/master/R/fig3.RData",tmpfile) ##overwrite
+load(tmpfile)
 library(rafalib)
 mypar2(1,2)
 dat <- list(Treatment=x,Control=y)
@@ -122,7 +127,8 @@ stripchart(dat,vertical=TRUE,method="jitter",pch=16,add=TRUE,col=1)
 The purpose of many statistical analyses is to determine relationships between two variables. Sample correlations are typically reported and sometimes plots are displayed to show this. However, showing just the regression line is one way to display your data baldy as it hides the scatter. Surprisingly plots such as the following are commonly seen:
 
 ```{r}
-load("R/fig4.RData")
+download("https://github.com/kbroman/Talk_Graphs/raw/master/R/fig4.RData",tmpfile)
+load(tmpfile)
 plot(x,y,lwd=2,type="n")
 fit <- lm(y~x)
 abline(fit$coef,lwd=2)
@@ -134,7 +140,6 @@ text(78, 187,expression(paste(rho," = 0.8567")),adj=c(0,0.5))
 
 Showing the data is much more informative:
 ```{r}
-load("R/fig4.RData")
 plot(x,y,lwd=2)
 fit <- lm(y~x)
 abline(fit$coef,lwd=2)
@@ -240,7 +245,8 @@ The follow figure shows three curves. Pseudo 3D is used but it is not clear way.
 This plot can be made better by simply using color to distinguish the three lines:
 
 ```{r,fig.align='center',fig.width=5}
-x <- read.table("R/fig8dat.csv", sep=",", header=TRUE)
+download("https://github.com/kbroman/Talk_Graphs/raw/master/R/fig8dat.csv",tmpfile)
+x <- read.table(tmpfile, sep=",", header=TRUE)
 plot(x[,1],x[,2],xlab="log Dose",ylab="Proportion survived",ylim=c(0,1),
      type="l",lwd=2,col=1)
 lines(x[,1],x[,3],lwd=2,col=2)
