@@ -101,12 +101,13 @@ Karl W Broman
 {\smallersize Biostatistics \& Medical Informatics
 
 University of Wisconsin -- Madison
-\vspace{20mm}
+\vspace{15mm}
 
 
 \href{http://kbroman.org}{\tt kbroman.org} \\
 \href{http://github.com/kbroman}{\tt github.com/kbroman} \\
-\href{https://twitter.com/kwbroman}{\tt @kwbroman}
+\href{https://twitter.com/kwbroman}{\tt @kwbroman} \\
+{\color{gray} Slides:} \href{http://bit.ly/CDHA2016}{\tt bit.ly/CDHA2016}
 
 }
 
@@ -1534,6 +1535,10 @@ Turning tables into graphs. The American Statistician 56:121-130
 \vspace*{8mm}
 
 \item Nature Methods columns: \href{http://bang.clearscience.info/?p=546}{\tt http://bang.clearscience.info/?p=546}
+
+\vspace*{8mm}
+
+\item These slides: \href{http://bit.ly/CDHA2016}{\tt bit.ly/CDHA2016}
 
 \end{itemize}
 \end{minipage}
