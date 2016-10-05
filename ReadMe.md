@@ -1,10 +1,12 @@
 ## Talk on &ldquo;Creating effective figures and tables&rdquo;
 
-These are slides for a talk that I will give on 29 Oct 2014, for MD-PhD students in a
-seminar course led by [Caitlin Pepperell](http://labs.medmicro.wisc.edu/pepperell/).
+These are slides for a talk that I will give on 5 Oct 2016, for
+[Demography Training Seminar](http://www.ssc.wisc.edu/cdha/seminars/training.html),
+[Center for Demography of Health and Aging](http://www.ssc.wisc.edu/cdha/),
+[University of Wisconsin&ndash;Madison](http://www.wisc.edu).
 
 A PDF is
-[here](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_MDPhD2014.pdf).
+[here](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_CDHA2014.pdf).
 
 <hr/>
 
