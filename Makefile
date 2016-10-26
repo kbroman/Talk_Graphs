@@ -32,7 +32,7 @@ Crashes/crashes_errors.pdf: Crashes/compare_measurements.R Crashes/data.R Crashe
 	cd $(<D);R CMD BATCH $(<F)
 
 web: graphs.pdf
-	scp graphs.pdf broman-10.biostat.wisc.edu:Website/presentations/graphs_CDHA2016.pdf
+	scp graphs.pdf broman-10.biostat.wisc.edu:Website/presentations/graphs_MDPhD2016.pdf
 
 Crashes/Figs/%.png:
 	cd $(@D);wget 'https://espnfivethirtyeight.files.wordpress.com/2014/10/$(@F)'

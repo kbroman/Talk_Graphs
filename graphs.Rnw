@@ -107,7 +107,7 @@ University of Wisconsin -- Madison
 \href{http://kbroman.org}{\tt kbroman.org} \\
 \href{http://github.com/kbroman}{\tt github.com/kbroman} \\
 \href{https://twitter.com/kwbroman}{\tt @kwbroman} \\
-{\color{gray} Slides:} \href{http://bit.ly/CDHA2016}{\tt bit.ly/CDHA2016}
+{\color{gray} Slides:} \href{http://tinyurl.com/Graphs2016}{\tt tinyurl.com/Graphs2016}
 
 }
 
@@ -1538,7 +1538,7 @@ Turning tables into graphs. The American Statistician 56:121-130
 
 \vspace*{8mm}
 
-\item These slides: \href{http://bit.ly/CDHA2016}{\tt bit.ly/CDHA2016}
+\item These slides: \href{http://tinyurl.com/Graphs2016}{\tt tinyurl.com/Graphs2016}
 
 \end{itemize}
 \end{minipage}
