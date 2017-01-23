@@ -52,3 +52,12 @@ MoreFigs/
 graphs_combined.pdf
 Data/*.R
 Data/*.csv
+ictr2014.pdf
+ictr2014.out
+ictr2014.tex
+Figs/fig2a_rev.png
+graphs_cmp2014.pdf
+graphs.out
+graphs.tex
+Crashes/*.Rout
+Crashes/Figs/

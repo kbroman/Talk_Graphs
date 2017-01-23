@@ -1,16 +1,8 @@
-all: graphs.pdf topten.pdf more_on_graphs.pdf graphs_combined.pdf
-
-graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig4a.png Figs/fig5a.png Figs/fig6r_a.png Figs/fig8a.png Figs/fig9a.png
+graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_rev.png TopTenWorstGraphs/broman_fig1.jpg Crashes/crashes.pdf Crashes/crashes_scatter.pdf Crashes/Figs/chalabi-dearmona-distracted.png Crashes/Figs/chalabi-dearmona-speeding.png Crashes/Figs/chalabi-dearmona-drinking.png Crashes/crashes_errors.pdf
 	pdflatex graphs
 
-topten.pdf: topten.tex TopTenWorstGraphs/broman_fig1.jpg
-	pdflatex topten
-
-more_on_graphs.pdf: more_on_graphs.tex
-	pdflatex more_on_graphs
-
-more_on_graphs.tex: more_on_graphs.Rnw
-	Rscript -e "library(knitr);knit('more_on_graphs.Rnw')"
+graphs.tex: graphs.Rnw
+	Rscript -e "library(knitr);knit('graphs.Rnw')"
 
 TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
 	unzip TopTenWorstGraphs.zip
@@ -24,26 +16,24 @@ Figs/fig1a.png: R/fig1.R
 Figs/fig3a.png: R/fig3.R
 	cd R;R CMD BATCH fig3.R fig3.Rout
 
-Figs/fig4a.png: R/fig4.R
-	cd R;R CMD BATCH fig4.R fig4.Rout
-
 Figs/fig5a.png: R/fig5.R
 	cd R;R CMD BATCH fig5.R fig5.Rout
 
-Figs/fig6r_a.png: R/fig6rev.R
-	cd R;R CMD BATCH fig6rev.R fig6.Rout
+Figs/fig2a_rev.png: R/fig2.R
+	cd R;R CMD BATCH fig2.R fig2.Rout
 
-Figs/fig8a.png: R/fig8.R
-	cd R;R CMD BATCH fig8.R fig8.Rout
+Crashes/crashes.pdf: Crashes/plot.R Crashes/proper_data.R
+	cd $(<D);R CMD BATCH $(<F)
 
-Figs/fig9a.png: R/fig9.R
-	cd R;R CMD BATCH fig9.R fig9.Rout
+Crashes/crashes_scatter.pdf: Crashes/scatterplots.R Crashes/proper_data.R
+	cd $(<D);R CMD BATCH $(<F)
 
-graphs_combined.pdf: graphs.pdf topten.pdf more_on_graphs.pdf
-	pdfjoin graphs.pdf topten.pdf more_on_graphs.pdf -o graphs_combined.pdf
+Crashes/crashes_errors.pdf: Crashes/compare_measurements.R Crashes/data.R Crashes/proper_data.R
+	cd $(<D);R CMD BATCH $(<F)
 
-web: graphs.pdf topten.pdf more_on_graphs.pdf graphs_combined.pdf
-	scp graphs.pdf broman-2:public_html/presentations/graphs2013.pdf
-	scp topten.pdf broman-2:public_html/presentations/
-	scp more_on_graphs.pdf broman-2:public_html/presentations/
-	scp graphs_combined.pdf broman-2:public_html/presentations/
+web: graphs.pdf
+	scp graphs.pdf broman-10.biostat.wisc.edu:Website/presentations/graphs_MDPhD2016.pdf
+
+Crashes/Figs/%.png:
+	cd $(@D);wget 'https://espnfivethirtyeight.files.wordpress.com/2014/10/$(@F)'
+	touch $@

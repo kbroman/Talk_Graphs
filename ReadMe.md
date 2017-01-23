@@ -1,16 +1,10 @@
-## Talk on &ldquo;How to display data badly&rdquo;
-
+## Talk on &ldquo;Creating effective figures and tables&rdquo;
 
 These are slides for a talk that I give as often as possible, because
 it's fun.
 
-This was inspired by Howard Wainer's article, whose title I stole:
-[H Wainer (1984) How to display data badly American Statistician
-38:137-147](http://www.rci.rutgers.edu/~roos/Courses/grstat502/wainer.pdf)
-
-
 A recent PDF is
-[here](http://www.biostat.wisc.edu/~kbroman/presentations/graphs2013.pdf).
+[here](https://www.biostat.wisc.edu/~kbroman/presentations/graphs_MDPhD2016.pdf)
 
 A whole bunch of older versions of the slides are at
 [my UW&ndash;Madison webpage](http://www.biostat.wisc.edu/~kbroman/presentations/]),
@@ -37,25 +31,6 @@ I also have a third set of slides, &ldquo;More on data visualization,&rdquo;
 with further advice on developing data visualizations. [[pdf here](http://www.biostat.wisc.edu/~kbroman/presentations/more_on_graphs.pdf)]
 
 Also see the [combined pdf](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_combined.pdf).
-
----
-
-The
-[iowastate2013](https://github.com/kbroman/Talk_Graphs/tree/iowastate2013)
-branch contains a version I gave (remotely) to the Graphics Working
-Group in the [Department of Statistics](http://www.stat.iastate.edu/),
-[Iowa State University](http://www.iastate.edu/).
-
-The [ictr2014](https://github.com/kbroman/Talk_Graphs/tree/ictr2014)
-branch contains a version I gave in a manuscript writing workshop for
-the
-[Institute for Clinical and Translational Research](http://ictr.wisc.edu/),
-[University of Wisconsin-Madison](http://www.wisc.edu).
-
-The [cmp2014](https://github.com/kbroman/Talk_Graphs/tree/cmp2014)
-branch contains a version I gave to the
-[Dept of Pathology and Laboratory Medicine](http://www.pathology.wisc.edu/)
-at UW-Madison.
 
 ---
 

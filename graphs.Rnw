@@ -1,0 +1,1748 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[landscape,pdftex]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\DeclareOption{bigsym}{\DeclareSymbolFont{largesymbols}{OMX}{psycm}{m}{n}}
+\ProcessOptions
+
+\setlength{\oddsidemargin}{-0.75in}
+\setlength{\evensidemargin}{-0.75in}
+\setlength{\topmargin}{-1in}
+\setlength{\textheight}{7.75in}
+\setlength{\textwidth}{10.5in}
+\setlength{\footskip}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+
+\renewcommand{\familydefault}{phv} % helvetica
+
+% knitr options
+<<options, echo=FALSE, results="hide">>=
+library(plotrix) # for draw.circle
+library(RColorBrewer)
+library(broman) # for colors
+opts_chunk$set(echo=FALSE, results="hide", echo=FALSE,
+               fig.path="MoreFigs/", verbose=TRUE,
+               fig.height=6.5, fig.width=10,
+               fig.align="center")
+
+# background colors
+bgcolor <- rgb(0.1, 0.1, 0.1, maxColorValue=1)
+@
+
+
+% following: color
+\definecolor{bgcolor}{rgb}{0.1,0.1,0.1}
+\definecolor{yellow}{rgb}{1,1,0.4}
+\definecolor{blue}{rgb}{0.4,0.8,1}
+\definecolor{pink}{rgb}{0.9882353,0.5372549,0.6745098}
+\definecolor{white}{rgb}{1,1,1}
+\definecolor{gray}{rgb}{0.6,0.6,0.6}
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+\hypersetup{colorlinks, urlcolor={blue}}
+
+% header/footer layout
+\pagestyle{fancy}
+\lhead{} \chead{} \rhead{}
+\lfoot{} \cfoot{} \rfoot{\color{gray} \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% font sizes
+\newcommand{\superlarge}{\fontsize{60}{60} \selectfont}
+\newcommand{\titlesize}{\fontsize{40}{50} \selectfont}
+\newcommand{\headsize}{\fontsize{35}{35} \selectfont}
+\newcommand{\textsize}{\fontsize{30}{35} \selectfont}
+\newcommand{\smallsize}{\fontsize{25}{30} \selectfont}
+\newcommand{\smallersize}{\fontsize{20}{25} \selectfont}
+\newcommand{\smallestsize}{\fontsize{18}{22} \selectfont}
+\newcommand{\evensmaller}{\fontsize{14}{18} \selectfont}
+\newcommand{\lod}{\text{LOD}}
+\newcommand{\bic}{\text{BIC}}
+\newcommand{\rss}{\text{RSS}}
+\newcommand{\var}{\text{var}}
+\newcommand{\M}{\text{M}}
+%\renewcommand{\log}{\text{log}}
+%\renewcommand{\max}{\text{max}}
+
+
+
+\pagecolor{bgcolor}
+\color{white}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\titlesize \color{yellow}
+
+\vspace*{24.5mm}
+
+{\headsize Creating effective figures and tables}
+
+\vspace*{14.5mm}
+
+\color{pink}
+\rule{10in}{1mm}
+%\vspace{-10mm}
+
+\vspace{10mm}
+
+\textsize \color{blue}
+Karl W Broman
+\vspace{5mm}
+
+{\smallersize Biostatistics \& Medical Informatics
+
+University of Wisconsin -- Madison
+\vspace{15mm}
+
+
+\href{http://kbroman.org}{\tt kbroman.org} \\
+\href{http://github.com/kbroman}{\tt github.com/kbroman} \\
+\href{https://twitter.com/kwbroman}{\tt @kwbroman} \\
+{\color{gray} Slides:} \href{http://tinyurl.com/Graphs2016}{\tt tinyurl.com/Graphs2016}
+
+}
+
+\end{center}
+
+\vfill \hfill
+\href{http://creativecommons.org/publicdomain/zero/1.0/}{\includegraphics[height=14mm]{Figs/cc-zero.png}}
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Displaying data well
+\end{minipage}
+
+\vspace{30mm}
+\smallsize \color{white}
+
+\hspace{0.5in} \begin{minipage}[t]{9in}
+\begin{itemize}
+
+\itemsep24pt
+
+\item Be accurate and clear.
+
+\item Let the data speak.
+
+{\color{blue} \smallersize
+\begin{itemize}
+\item Show as much information as possible, taking care not to
+  obscure the message.
+\end{itemize} }
+
+\item Science not sales.
+
+{\color{blue} \smallersize
+\begin{itemize}
+\item Avoid unnecessary frills (esp. gratuitous 3d).
+\end{itemize} }
+
+\item In tables, every digit should be meaningful. Don't drop ending 0's.
+
+\end{itemize}
+\end{minipage}
+
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1c.png}
+\end{minipage}
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1d.png}
+\end{minipage}
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1e.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1f.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1g.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Show the data
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig1h.png}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2a_rev.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2c.png}
+\end{minipage}
+
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2a_rev.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2d.png}
+\end{minipage}
+
+
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2a_rev.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig2e.png}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts, fig.height=6, fig.width=8>>=
+x <- list(18:22, c(20,20,19,21,20))
+for(i in 1:2) names(x[[i]]) <- LETTERS[seq(along=x[[i]])]
+
+par(bg=bgcolor, fg="white")
+par(mar=rep(1.1, 4))
+par(mfrow=c(2,2))
+for(i in 1:2)
+  pie(x[[i]], LETTERS[1:5], col=brewer.pal(5, "Set2"))
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts_3d, fig.height=6, fig.width=8>>=
+par(bg=bgcolor, fg="white")
+par(mar=rep(1.1, 4))
+par(mfrow=c(2,2))
+for(i in 1:2)
+    pie3D(x[[i]], labels=LETTERS[1:5], explode=0.1, col=brewer.pal(5, "Set2"),
+          mar=rep(1,4), labelcex=1)
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts_3d_w_bars, fig.height=6, fig.width=8>>=
+par(bg=bgcolor, fg="white", col.axis="white")
+par(mfrow=c(2,2))
+par(mar=rep(1.1, 4))
+for(i in 1:2)
+    pie3D(x[[i]], labels=LETTERS[1:5], explode=0.1, col=brewer.pal(5, "Set2"),
+          mar=rep(1,4), labelcex=1)
+par(mar=c(6.1, 4.1, 1.1, 1.1))
+for(i in 1:2)
+    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1,
+            ylim=c(0, 22))
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Avoid pie charts
+\end{minipage}
+
+\vspace{18mm}
+
+<<piecharts_w_bars, fig.height=6, fig.width=8>>=
+par(bg=bgcolor, fg="white", col.axis="white")
+par(mfrow=c(2,2))
+par(mar=rep(1.1, 4))
+for(i in 1:2)
+  pie(x[[i]], LETTERS[1:5], col=brewer.pal(5, "Set2"))
+par(mar=c(6.1, 4.1, 1.1, 1.1))
+for(i in 1:2)
+    barplot(x[[i]], names=LETTERS[1:5], col=brewer.pal(5, "Set2"), las=1,
+            ylim=c(0, 22))
+@
+
+\hfill \smallestsize \color{blue}
+via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
+(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3b.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3c.png}
+\end{minipage}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3a.png}
+\end{minipage}
+\hspace{25mm}
+\begin{minipage}[t]{4.5in}
+\vspace*{0cm}
+
+\includegraphics[width=4.5in]{Figs/fig3d.png}
+\end{minipage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5c.png}}
+
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5d.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5e.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5f.png}}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Consider logs
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5b.png}}
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Take differences
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=6in]{Figs/fig5a.png}}
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Ease comparisons
+
+\bigskip
+
+\color{blue} \smallersize
+(things to be compared should be adjacent)
+\end{minipage}
+
+\vspace{10mm}
+
+<<genotype_and_sex, fig.height=5.5>>=
+par(mfrow=c(1,2))
+set.seed(11341)
+me <- c(10, 15, 17, 12, 16, 18)
+se <- runif(length(me), 0.5, 1)
+me <- me[c(1,4,2,5,3,6)]
+lo <- me - se
+hi <- me + se
+xd <- 0.2
+xat <- c(1, 2, 3)
+xat <- sort(c(xat - xd, xat + xd))
+par(bg=bgcolor, fg="white", col="white", las=1, col.axis="white",
+    col.lab="white")
+plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
+     ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
+     xaxs="i", yaxs="i")
+abline(h=pretty(c(lo, hi)), col="gray25")
+segments(xat, lo, xat, hi, lwd=2)
+segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2)
+segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2)
+segments(xat-xd/4, me, xat+xd/4, me, lwd=2)
+axis(side=1, at=xat, rep(c("Female", "Male"), 3), cex.axis=0.7,
+     fg="white", col.axis="white")
+axis(side=1, at=1:3, c("AA", "AB", "BB"), col.axis="white",
+     tick=FALSE, line=2, cex.axis=1.3)
+
+
+me <- me[c(1,3,5,2,4,6)]
+se <- se[c(1,3,5,2,4,6)]
+lo <- me - se
+hi <- me + se
+xd <- 0.2
+xat <- c(0.3, 0.6, 0.9, 1.5, 1.8, 2.1)
+plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
+     ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
+     xaxs="i", yaxs="i")
+abline(h=pretty(c(lo, hi)), col="gray25")
+segments(xat, lo, xat, hi, lwd=2)
+segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2)
+segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2)
+segments(xat-xd/4, me, xat+xd/4, me, lwd=2)
+axis(side=1, at=xat, rep(c("AA", "AB", "BB"), 2),
+     fg="white", col.axis="white")
+axis(side=1, at=c(0.6, 1.8), c("Female", "Male"), col.axis="white",
+     tick=FALSE, line=2, cex.axis=1.3)
+@
+
+
+
+
+
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Ease comparisons
+
+\bigskip
+
+\color{blue} \smallersize
+(add a bit of color)
+\end{minipage}
+
+\vspace{10mm}
+
+<<genotype_and_sex_color, fig.height=5.5>>=
+par(mfrow=c(1,2))
+set.seed(11341)
+me <- c(10, 15, 17, 12, 16, 18)
+se <- runif(length(me), 0.5, 1)
+me <- me[c(1,4,2,5,3,6)]
+lo <- me - se
+hi <- me + se
+xd <- 0.2
+xat <- c(1, 2, 3)
+xat <- sort(c(xat - xd, xat + xd))
+pink <- brocolors("crayons")["Tickle Me Pink"]
+blue <- brocolors("crayons")["Cerulean"]
+col <- rep(c(pink, blue), 3)
+par(bg=bgcolor, fg="white", col="white", col.axis="white", col.lab="white",
+    las=1)
+plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
+     ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
+     xaxs="i", yaxs="i")
+abline(h=pretty(c(lo, hi)), col="gray25")
+segments(xat, lo, xat, hi, lwd=2, col=col)
+segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2, col=col)
+segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2, col=col)
+segments(xat-xd/4, me, xat+xd/4, me, lwd=2, col=col)
+axis(side=1, at=xat, rep("", 6), cex.axis=0.7)
+for(i in seq(along=xat))
+  axis(side=1, at=xat[i], rep(c("Female", "Male"), 3)[i], cex.axis=0.7,
+       col="white", col.axis=col[i], tick=FALSE)
+axis(side=1, at=1:3, c("AA", "AB", "BB"),
+     tick=FALSE, line=2, cex.axis=1.3)
+
+
+me <- me[c(1,3,5,2,4,6)]
+se <- se[c(1,3,5,2,4,6)]
+lo <- me - se
+hi <- me + se
+xd <- 0.2
+xat <- c(0.3, 0.6, 0.9, 1.5, 1.8, 2.1)
+col <- rep(c(pink, blue), rep(3, 2))
+plot(0, 0, type="n", xlab="", xaxt="n", ylab="Phenotype",
+     ylim=range(c(lo, hi))+c(-1, +1), xlim=range(xat)+c(-xd, xd)*2,
+     xaxs="i", yaxs="i")
+abline(h=pretty(c(lo, hi)), col="gray25")
+segments(xat, lo, xat, hi, lwd=2, col=col)
+segments(xat-xd/8, lo, xat+xd/8, lo, lwd=2, col=col)
+segments(xat-xd/8, hi, xat+xd/8, hi, lwd=2, col=col)
+segments(xat-xd/4, me, xat+xd/4, me, lwd=2, col=col)
+axis(side=1, at=xat, rep(c("AA", "AB", "BB"), 2),
+     col="white", col.axis="white")
+for(i in 1:2)
+  axis(side=1, at=c(0.6, 1.8)[i], c("Female", "Male")[i], col.axis=col[c(1,4)][i],
+       tick=FALSE, line=2, cex.axis=1.3)
+@
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.75in}
+\centering
+Which comparison is easiest?
+\end{minipage}
+
+\vfill
+
+<<many_plots, >>=
+par(mfrow=c(2,3), bg=bgcolor, col="white", fg="white",
+    col.axis="white", col.lab="white", las=1,
+    mar=c(4.1, 4.1, 1.1, 1.1))
+ht <- c(83, 114, 36, 67, 114, 154, 137)
+names(ht) <- rep("", length(ht))
+names(ht)[4:5] <- c("A", "B")
+col <- rep(bgcolor, length(ht))
+col[4:5] <- c(pink, blue)
+
+barplot(ht, col=col, border="white", ylim=c(0, max(ht)*1.1))
+u <- par("usr")
+rect(u[1], u[3], u[2], u[4], border="white")
+
+
+o <- c(4, 2, 3, 1, 5, 6, 7)
+barplot(ht[o], col=col[o], border="white", ylim=c(0, max(ht)*1.1))
+u <- par("usr")
+rect(u[1], u[3], u[2], u[4], border="white")
+
+htlist <- list(ht[o][1:4], ht[o][5:7])
+collist <- list(col[o][1:4], col[o][5:7])
+lablist <- list(names(ht)[o][1:4], names(ht)[o][5:7])
+plot(0, 0, type="n", xaxt="n", xlab="", ylab="", xlim=c(0.5, 2.5),
+     ylim=c(0, max(sapply(htlist, sum))*1.1), yaxs="i", xaxs="i")
+xl <- c(0.75, 1.65)
+xr <- c(1.35, 2.25)
+for(i in 1:2) {
+  top <- cumsum(htlist[[i]])
+  bot <- cumsum(c(0, htlist[[i]]))
+  for(j in seq(along=htlist[[i]])) {
+    rect(xl[i], bot[j], xr[i], top[j], border="white",
+         col=collist[[i]][j])
+    text((xl[i] + xr[i])/2, (bot[j]+top[j])/2, lablist[[i]][j], col=bgcolor)
+  }
+}
+
+htlist[[2]] <- rev(htlist[[2]])
+collist[[2]] <- rev(collist[[2]])
+lablist[[2]] <- rev(lablist[[2]])
+plot(0, 0, type="n", xaxt="n", xlab="", ylab="", xlim=c(0.5, 2.5),
+     ylim=c(0, max(sapply(htlist, sum))*1.1), yaxs="i", xaxs="i")
+xl <- c(0.75, 1.65)
+xr <- c(1.35, 2.25)
+for(i in 1:2) {
+  top <- cumsum(htlist[[i]])
+  bot <- cumsum(c(0, htlist[[i]]))
+  for(j in seq(along=htlist[[i]])) {
+    rect(xl[i], bot[j], xr[i], top[j], border="white",
+         col=collist[[i]][j])
+    text((xl[i] + xr[i])/2, (bot[j]+top[j])/2, lablist[[i]][j], col=bgcolor)
+  }
+}
+
+collist[[1]][2] <- collist[[2]][3]
+collist[[2]][3] <- collist[[2]][2]
+lablist[[1]][2] <- lablist[[2]][3]
+lablist[[2]][3] <- lablist[[2]][2]
+plot(0, 0, type="n", xaxt="n", xlab="", ylab="", xlim=c(0.5, 2.5),
+     ylim=c(0, max(sapply(htlist, sum))*1.1), yaxs="i", xaxs="i")
+xl <- c(0.75, 1.65)
+xr <- c(1.35, 2.25)
+for(i in 1:2) {
+  top <- cumsum(htlist[[i]])
+  bot <- cumsum(c(0, htlist[[i]]))
+  for(j in seq(along=htlist[[i]])) {
+    rect(xl[i], bot[j], xr[i], top[j], border="white",
+         col=collist[[i]][j])
+    text((xl[i] + xr[i])/2, (bot[j]+top[j])/2, lablist[[i]][j], col=bgcolor)
+  }
+}
+
+o <- c(1,2,3,5,6,4,7)
+pie(ht[o], col=col[o], border="white")
+@
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Don't distort the quantities
+
+\color{blue} \smallsize
+(value $\propto$ {\color{pink} radius})
+\end{minipage}
+
+\vfill
+
+<<circles_messed_up>>=
+gL <- c("Arabidopsis"=0.145, "Human" = 3.2, "Wheat"=17)
+
+library(broman)
+green <- brocolors("crayons")["Caribbean Green"]
+
+mult <- sqrt(gL["Human"]/pi)/gL["Human"]
+par(mar=rep(0.1, 4), bg=bgcolor, col="white")
+plot(0,0,type="n", xlim=c(0, 25), ylim=c(0, 25), xlab="", ylab="",
+     xaxt="n", yaxt="n", xaxs="i", yaxs="i")
+draw.circle(20, 20, gL["Wheat"],     nv=251, lwd=2, border="wheat", col="wheat")
+text(5/mult, 4/mult, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
+draw.circle( 1,  1,  gL["Arabidopsis"], nv=251, lwd=2, border=green, col=green)
+text(1.3, 0.5, "Arabidopsis (0.145 Gbp)", col=green, adj=c(0, 0.5))
+draw.circle( 4,  6,  gL["Human"],   nv=251, lwd=2, border=pink, col=pink)
+text(4, 4, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
+@
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Don't distort the quantities
+
+\color{blue} \smallsize
+(value $\propto$ area)
+\end{minipage}
+
+\vfill
+
+<<circles_fixed>>=
+mx <- 25*mult
+par(mar=rep(0.1, 4), bg=bgcolor, col="white")
+plot(0,0,type="n", xlim=c(0, mx), ylim=c(0, mx), xlab="", ylab="",
+     xaxt="n", yaxt="n", xaxs="i", yaxs="i")
+draw.circle(5, 4, sqrt(gL["Wheat"]/pi),     nv=251, lwd=2, border="wheat", col="wheat")
+text(5, 4, "Wheat (17 Gbp)", col=bgcolor, cex=1.5)
+draw.circle(mult*0.9, mult*1.7, sqrt(gL["Arabidopsis"]/pi), nv=251, lwd=2, border=green, col=green)
+text(1.3*mult, 0.5*mult, "Arabidopsis (0.145 Gbp)", col=green, adj=c(0, 0.5))
+draw.circle(4*mult,  6*mult,  sqrt(gL["Human"]/pi),   nv=251, lwd=2, border=pink, col=pink)
+text(4*mult, 4*mult, "Human (3.2 Gbp)", col=bgcolor, adj=c(0.5, 0.5))
+@
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Don't use areas at all
+
+\color{blue} \smallsize
+(value $\propto$ length)
+\end{minipage}
+
+\vfill
+
+<<circles_barplot,fig.width=6.5>>=
+par(mar=c(3.1, 5.1, 0.6, 0.6), bg=bgcolor, las=1, fg="white",
+    col.lab="white", col.axis="white")
+b <- barplot(gL, col=c(green, pink, "wheat"), ylab="Genome size (Gbp)",
+             ylim=c(0, 18), col.lab="white", yaxs="i", border=c(green, pink, "wheat"),
+             names.arg=rep("", 3), cex.lab=1.5, cex.axis=1.5)
+u <- par("usr")
+rect(u[1], u[3], u[2], u[4], border="white")
+axis(side=1, at=b, names(gL), col.axis="white", col="white",
+     cex.axis=1.5, tick=FALSE)
+@
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Encoding data
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+\hspace{1in} \begin{minipage}[t]{4in}
+\vspace*{0mm}
+
+{\smallsize \color{pink} Quantities}
+\vspace{5mm}
+
+\begin{itemize}
+\item Position
+\item Length
+\item Angle
+\item Area
+\item Luminance {\color{blue} (light/dark)}
+\item Chroma {\color{blue} (amount of color)}
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{4in}
+\vspace*{0mm}
+
+{\smallsize \color{pink} Categories}
+\vspace{5mm}
+
+\begin{itemize}
+\item Shape
+\item Hue {\color{blue} (which color)}
+\item Texture
+\item Width
+\end{itemize}
+
+\end{minipage}
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Ease comparisons
+
+\bigskip
+
+\color{blue} \smallersize
+(align things vertically)
+\end{minipage}
+
+\vfill
+
+<<histograms>>=
+par(mfrow=c(2,2), bg=bgcolor, fg="white", col="white",
+    col.axis="white", col.lab="white")
+set.seed(85588489)
+fem <- rnorm(600, 64, 2.8)
+mal <- rnorm(600, 68, 2.8)
+jt <- c(fem, mal)
+br <- seq(min(jt), max(jt), len=51)
+hist(fem, breaks=br, yaxt="n", ylab="", main="Women",
+     xlab="Height (in)", col.main=pink)
+hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+@
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Ease comparisons
+
+\bigskip
+
+\color{blue} \smallersize
+(use common axes)
+\end{minipage}
+
+\vfill
+
+<<histograms2>>=
+par(mfcol=c(2,2), bg=bgcolor, fg="white", col="white",
+    col.axis="white", col.lab="white")
+hist(fem, breaks=51, yaxt="n", ylab="", main="Women",
+     xlab="Height (in)", col.main=pink)
+hist(mal, breaks=51, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+hist(fem, breaks=br, yaxt="n", ylab="", main="Women",
+     xlab="Height (in)", col.main=pink)
+hist(mal, breaks=br, yaxt="n", ylab="", main="Men",
+     xlab="Height (in)", col.main=blue)
+@
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Use labels not legends
+\end{minipage}
+
+\vfill
+
+<<direct_label>>=
+data(iris)
+par(bg=bgcolor, fg="white", col.lab="white", las=1, col.axis="white")
+par(mfrow=c(1, 2))
+green <- rgb(102,254,102,maxColorValue=255)
+yellow <- rgb(255, 255, 102, maxColorValue=255)
+purple <- rgb(203,102,254,maxColorValue=255)
+jitx <- runif(nrow(iris), -0.1, 0.1)
+jity <- runif(nrow(iris), -0.02, 0.02)
+plot(I(Petal.Width + jity) ~ I(Petal.Length + jitx), data=iris,
+     bg=c(blue, green, pink)[as.numeric(Species)],
+     xlab = "Petal length (cm)", ylab="Petal width (cm)", pch=21)
+legend("topleft", levels(iris$Species), pt.bg=c(blue, green, pink),
+       pch=21, col="white")
+
+plot(I(Petal.Width + jity) ~ I(Petal.Length + jitx), data=iris,
+     bg=c(blue, green, pink)[as.numeric(Species)], col="white",
+     xlab = "Petal length (cm)", ylab="Petal width (cm)", pch=21)
+text(2.2,  0.4,  levels(iris$Species)[1], adj=c(0, 0.5), col=blue)
+text(3.25, 1.4,  levels(iris$Species)[2], adj=c(1, 0.5), col=green)
+text(4.7,  2.2,  levels(iris$Species)[3], adj=c(1, 0.5), col=pink)
+@
+
+
+
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Don't sort alphabetically
+\end{minipage}
+
+\vfill
+
+<<alphabet>>=
+load("Data/health.RData")
+
+par(mfrow=c(1,2), bg=bgcolor, las=1, fg="white",
+    col.lab="white", col.axis="white",
+    mar=c(5.1, 10.1, 1.1, 1.1))
+
+plot(0, 0, type="n", xlab="Health care spending (% GDP)",
+     ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
+     ylim=c(nrow(health), 0)+0.5, yaxs="i")
+axis(side=2, at=1:25, health[,1])
+abline(v=seq(5, 15, by=5), col="gray25")
+abline(h=seq(1, 25, by=5), col=blue)
+points(health[,2], 1:25, pch=16)
+axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
+
+o <- order(health[,2], decreasing=TRUE)
+plot(0, 0, type="n", xlab="Health care spending (% GDP)",
+     ylab="", yaxt="n", xlim=c(0, max(health[,2])*1.05), xaxs="i",
+     ylim=c(nrow(health), 0)+0.5, yaxs="i")
+axis(side=2, at=1:25, health[o,1])
+abline(v=seq(5, 15, by=5), col="gray25")
+abline(h=seq(1, 25, by=5), col=blue)
+points(health[o,2], 1:25, pch=16)
+axis(side=2, at=seq(1, 25, by=5), rep("", 5), col.ticks=blue)
+@
+
+
+
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{6.25in}
+\centering
+Must you include 0?
+\end{minipage}
+
+\vfill
+
+<<include_0>>=
+par(mfrow=c(1,2), bg=bgcolor, las=1, fg="white",
+    col.lab="white", col.axis="white")
+rate <- c(96.5, 98.1, 99.2)
+b <- barplot(rate, col=c(blue, green, pink), ylab="Detection rate (%)",
+             ylim=c(0, 120), col.lab="white", yaxs="i",
+             border=c(blue, green, pink), xlab="Method",
+             names.arg=rep("", 3), cex.lab=1.5, cex.axis=1.5)
+u <- par("usr")
+rect(u[1], u[3], u[2], u[4], border="white")
+axis(side=1, at=b, LETTERS[1:3], col.axis="white", col="white",
+     cex.axis=1.5, tick=FALSE)
+text(b, rate+5, paste0(rate, "%"))
+
+plot(0, 0, type="n", ylim=c(95, 100), yaxs="i",
+     xlim=c(0.5, 3.5), xaxt="n", xlab="Method",
+     cex.lab=1.5, cex.axis=1.5, ylab="Detection rate (%)")
+abline(h=96:99, col="gray25")
+x <- 1:3
+xd <- 0.2
+se <- sqrt(rate*(100-rate)/1000)
+segments(x, rate-se, x, rate+se, lwd=2, col=c(blue, green, pink))
+segments(x-xd/2, rate-se, x+xd/2, rate-se, lwd=2, col=c(blue, green, pink))
+segments(x-xd/2, rate+se, x+xd/2, rate+se, lwd=2, col=c(blue, green, pink))
+segments(x-xd, rate, x+xd, rate, lwd=3, col=c(blue, green, pink))
+axis(side=1, at=1:3, LETTERS[1:3], cex.axis=1.5)
+@
+
+
+
+
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+A bad table
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[width=8in]{Figs/tableB.png}}
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Fewer digits
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[width=8in]{Figs/tableA.png}}
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Yuck!
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\includegraphics[height=6in]{Figs/lancet_table.pdf}}
+
+\vfill \hfill \smallestsize \color{blue}
+Feigen et al., Lancet 383:245-255, 2014, Table 1
+
+\vspace{5mm}
+
+\newpage
+
+\addtocounter{page}{-1}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Yuck!
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\includegraphics[height=6in]{Figs/lancet_table_crop.png}}
+
+\vfill \hfill \smallestsize \color{blue}
+Feigen et al., Lancet 383:245-255, 2014, Table 1
+
+\vspace{5mm}
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+What was wrong with that?
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+
+\hspace{0.5in} \begin{minipage}[t]{9in}
+\begin{itemize}
+
+\itemsep18pt
+
+\item {\color{pink} Way} too many digits.
+
+\item Numbers aren't aligned.
+
+\item Numbers to be compared aren't anywhere near each other.
+
+\item The interesting comparisons are horizontal rather than
+  vertical.
+
+\item It would be much better as a multi-panel figure.
+\end{itemize} \end{minipage}
+
+\newpage
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+One last example
+\end{minipage}
+
+\vspace{0mm}
+
+\begin{center}
+\begin{minipage}[t]{2.5in}
+
+  \vspace*{0mm}
+
+\centerline{\includegraphics[height=6.2in]{Crashes/Figs/chalabi-dearmona-distracted.png}}
+
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}[t]{2.5in}
+
+  \vspace*{0mm}
+
+\centerline{\includegraphics[height=6.2in]{Crashes/Figs/chalabi-dearmona-speeding.png}}
+
+\end{minipage}
+\hspace{5mm}
+\begin{minipage}[t]{2.5in}
+
+\vspace*{0mm}
+
+\centerline{\includegraphics[height=6.2in]{Crashes/Figs/chalabi-dearmona-drinking.png}}
+
+
+\end{minipage}
+\end{center}
+
+
+\hfill \smallestsize \color{blue}
+\href{http://fivethirtyeight.com/datalab/which-state-has-the-worst-drivers/}{\tt fivethirtyeight.com/datalab/which-state-has-the-worst-drivers}
+
+\newpage
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+An alternative
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\href{https://www.biostat.wisc.edu/~kbroman/D3/car_crashes/}{\includegraphics{Crashes/crashes.pdf}}}
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Scatterplots
+\end{minipage}
+
+\vspace{10mm}
+
+\centerline{\href{https://www.biostat.wisc.edu/~kbroman/D3/car_crashes/}{\includegraphics{Crashes/crashes_scatter.pdf}}}
+
+
+
+
+\newpage
+
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Summary I
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+\hspace{0.5in} \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+\item Show the data
+
+\item Avoid chart junk
+
+\item Consider taking logs and/or differences
+
+\item Put the things to be compared next to each other
+
+\item Use color to set things apart, but consider color blind folks
+
+\item Use position rather than angle or area to represent quantities
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Summary II
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+\hspace{0.5in} \begin{minipage}{9.5in}
+
+\begin{itemize}
+\itemsep18pt
+
+
+\item Align things vertically to ease comparisons
+
+\item Use common axis limits to ease comparisons
+
+\item Use labels rather than legends
+
+\item Sort on meaningful variables (not alphabetically)
+
+\item Must 0 be included in the axis limits?
+
+\item Use scatterplots to explore relationships
+
+\end{itemize}
+
+\end{minipage}
+
+
+\newpage
+
+
+
+
+
+\headsize \color{yellow}
+\hfill
+\begin{minipage}{5.75in}
+\centering
+Inspirations
+\end{minipage}
+
+\vspace{30mm}
+
+\smallersize \color{white}
+\hspace{0.5in} \begin{minipage}{9.5in}
+
+\begin{itemize}
+\item Hadley Wickham
+{\smallestsize \color{blue}
+(slides at \href{http://courses.had.co.nz}{\tt http://courses.had.co.nz})}
+
+\item Naomi Robbins
+{\smallestsize \color{blue}
+(\emph{Creating more effective graphs})}
+
+\item Howard Wainer
+
+\item Andrew Gelman
+
+\item Dan Carr
+
+\item Edward Tufte
+
+\end{itemize}
+
+\end{minipage}
+
+
+
+
+\newpage
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+Further reading
+\end{minipage}
+
+\vspace{30mm}
+\smallestsize \color{white}
+
+\hspace{0.5in} \begin{minipage}[t]{9in}
+\begin{itemize}
+
+\itemsep12pt
+
+\item ER Tufte (1983) The visual display of quantitative information.
+Graphics Press.
+\item ER Tufte (1990) Envisioning information. Graphics Press.
+\item ER Tufte (1997) Visual explanations. Graphics Press.
+
+\vspace*{8mm}
+
+\item A Gelman, C Pasarica, R Dodhia (2002) Let's practice what we preach:
+Turning tables into graphs. The American Statistician 56:121-130
+
+\vspace*{8mm}
+
+\item NB Robbins (2004) Creating more effective graphs. Wiley
+
+\vspace*{8mm}
+
+\item Nature Methods columns: \href{http://bang.clearscience.info/?p=546}{\tt http://bang.clearscience.info/?p=546}
+
+\vspace*{8mm}
+
+\item These slides: \href{http://tinyurl.com/Graphs2016}{\tt tinyurl.com/Graphs2016}
+
+\end{itemize}
+\end{minipage}
+
+
+\newpage
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+The top ten worst graphs
+\end{minipage}
+
+\vspace{30mm}
+\smallsize \color{white}
+
+\hspace{0.5in} \begin{minipage}{9in}
+
+\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
+
+With apologizes to the authors, we provide the following list of the
+top ten worst graphs in the scientific literature.
+
+\vspace{15mm}
+
+As these examples indicate, good scientists can make mistakes.
+
+\vspace{35mm}
+
+\hfill \color{blue} \smallersize
+\href{http://bit.ly/TopTenWorstGraphs}{\tt bit.ly/TopTenWorstGraphs}
+
+\end{minipage}
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+10
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/broman_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Broman et al., Am J Hum Genet 63:861-869, 1998, Fig. 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+9
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cotter_fig2.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Cotter et al., J Clin Epidemiol 57:1086-1095, 2004, Fig 2
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+8
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/jorgenson_fig2a.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Jorgenson et al., Am J Hum Genet 76:276-290, 2005, Fig 2
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+7
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/kim_fig1.png}}
+
+\vfill \hfill \smallestsize \color{blue}
+Kim et al., Nutr Res Prac 6:120-125, 2012
+Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+6
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cawley_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Cawley et al., Cell 116:499-509, 2004, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+5
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/hummer_fig4.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Hummer et al., J Virol 75:7774-7777, 2001, Fig 4
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+4
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/epstein_fig1.jpg}}
+
+
+\vfill \hfill \smallestsize \color{blue}
+Epstein and Satten, Am J Hum Genet 73:1316-1329, 2003, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+3
+\end{minipage}
+
+\vspace{30mm}
+
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/mykland_fig1.jpg}}
+\vfill \hfill \smallestsize \color{blue}
+Mykland et al., J Am Stat Asso 90:233-241, 1995, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+2
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/wittke_thompson_fig1CD.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Wittke-Thompson et al., Am J Hum Genet 76:967-986, Fig 1
+
+\newpage
+\thispagestyle{empty}
+
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{5.75in}
+\centering
+1
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/roeder_fig4.jpg}}
+
+
+\vfill \hfill \smallestsize \color{blue}
+Roeder, Stat Sci 9:222-278, 1994, Fig 4
+
+
+\end{document}

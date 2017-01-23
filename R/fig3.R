@@ -9,7 +9,7 @@
 #save(x,y,z,file="fig3.RData",compress=TRUE)
 load("fig3.RData")
 
-bgcolor <- rgb(0, 0, 98, maxColorValue=255)
+bgcolor <- rgb(0.135, 0.135, 0.135, maxColorValue=1)
 
 #bitmap(file="../Figs/fig3a.bmp", width=6, height=5, res=288,
 #       pointsize=12)
