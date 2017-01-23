@@ -22,7 +22,7 @@
 \renewcommand{\familydefault}{phv} % helvetica
 
 % knitr options
-<<options, echo=FALSE, results="hide">>=
+<<options, echo=FALSE, results="hide",warning=FALSE,message=FALSE>>=
 library(plotrix) # for draw.circle
 library(RColorBrewer)
 library(broman) # for colors
