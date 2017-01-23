@@ -660,6 +660,25 @@ Take differences
 \centerline{\includegraphics[height=6in]{Figs/fig5a.png}}
 
 
+
+\newpage
+\thispagestyle{empty}
+
+\headsize \color{yellow}
+\hfill \begin{minipage}{6.75in}
+\centering
+Another ``take logs'' example
+\end{minipage}
+
+\vspace{30mm}
+
+\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/broman_fig1.jpg}}
+
+\vfill \hfill \smallestsize \color{blue}
+Broman et al., Am J Hum Genet 63:861-869, 1998, Fig. 1
+
+
+
 \newpage
 
 
@@ -1543,206 +1562,6 @@ Turning tables into graphs. The American Statistician 56:121-130
 \end{itemize}
 \end{minipage}
 
-
-\newpage
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-The top ten worst graphs
-\end{minipage}
-
-\vspace{30mm}
-\smallsize \color{white}
-
-\hspace{0.5in} \begin{minipage}{9in}
-
-\setlength{\rightskip}{0pt plus 1fil} % makes ragged right
-
-With apologizes to the authors, we provide the following list of the
-top ten worst graphs in the scientific literature.
-
-\vspace{15mm}
-
-As these examples indicate, good scientists can make mistakes.
-
-\vspace{35mm}
-
-\hfill \color{blue} \smallersize
-\href{http://bit.ly/TopTenWorstGraphs}{\tt bit.ly/TopTenWorstGraphs}
-
-\end{minipage}
-
-\newpage
-\thispagestyle{empty}
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-10
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/broman_fig1.jpg}}
-
-\vfill \hfill \smallestsize \color{blue}
-Broman et al., Am J Hum Genet 63:861-869, 1998, Fig. 1
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-9
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cotter_fig2.jpg}}
-
-\vfill \hfill \smallestsize \color{blue}
-Cotter et al., J Clin Epidemiol 57:1086-1095, 2004, Fig 2
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-8
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/jorgenson_fig2a.jpg}}
-
-\vfill \hfill \smallestsize \color{blue}
-Jorgenson et al., Am J Hum Genet 76:276-290, 2005, Fig 2
-
-\newpage
-\thispagestyle{empty}
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-7
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/kim_fig1.png}}
-
-\vfill \hfill \smallestsize \color{blue}
-Kim et al., Nutr Res Prac 6:120-125, 2012
-Fig 1
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-6
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/cawley_fig1.jpg}}
-
-\vfill \hfill \smallestsize \color{blue}
-Cawley et al., Cell 116:499-509, 2004, Fig 1
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-5
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/hummer_fig4.jpg}}
-
-\vfill \hfill \smallestsize \color{blue}
-Hummer et al., J Virol 75:7774-7777, 2001, Fig 4
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-4
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/epstein_fig1.jpg}}
-
-
-\vfill \hfill \smallestsize \color{blue}
-Epstein and Satten, Am J Hum Genet 73:1316-1329, 2003, Fig 1
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-3
-\end{minipage}
-
-\vspace{30mm}
-
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/mykland_fig1.jpg}}
-\vfill \hfill \smallestsize \color{blue}
-Mykland et al., J Am Stat Asso 90:233-241, 1995, Fig 1
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-2
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/wittke_thompson_fig1CD.jpg}}
-
-\vfill \hfill \smallestsize \color{blue}
-Wittke-Thompson et al., Am J Hum Genet 76:967-986, Fig 1
-
-\newpage
-\thispagestyle{empty}
-
-
-\headsize \color{yellow}
-\hfill \begin{minipage}{5.75in}
-\centering
-1
-\end{minipage}
-
-\vspace{30mm}
-
-\centerline{\includegraphics[height=5in]{TopTenWorstGraphs/roeder_fig4.jpg}}
-
-
-\vfill \hfill \smallestsize \color{blue}
-Roeder, Stat Sci 9:222-278, 1994, Fig 4
 
 
 \end{document}
