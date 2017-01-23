@@ -4,6 +4,9 @@ graphs.pdf: graphs.tex Figs/fig1a.png Figs/fig3a.png Figs/fig5a.png Figs/fig2a_r
 graphs.tex: graphs.Rnw
 	Rscript -e "library(knitr);knit('graphs.Rnw')"
 
+topten.pdf: topten.tex TopTenWorstGraphs/broman_fig1.jpg
+	pdflatex topten
+
 TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
 	unzip TopTenWorstGraphs.zip
 
