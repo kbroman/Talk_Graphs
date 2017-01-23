@@ -7,7 +7,7 @@ A recent PDF is
 [here](https://www.biostat.wisc.edu/~kbroman/presentations/graphs2017.pdf)
 
 A whole bunch of older versions of the slides are at
-[my UW&ndash;Madison webpage](http://www.biostat.wisc.edu/~kbroman/presentations/]),
+[my UW&ndash;Madison webpage](http://kbroman.org/pages/talks.html)
 including the
 [Director's cut](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_mac.ppt)
 of
@@ -26,11 +26,6 @@ There's also slides of the
 ([pdf here](http://www.biostat.wisc.edu/~kbroman/presentations/topten.pdf)).
 The needed figures are not in this repository, but are available
 [here](http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip).
-
-I also have a third set of slides, &ldquo;More on data visualization,&rdquo;
-with further advice on developing data visualizations. [[pdf here](http://www.biostat.wisc.edu/~kbroman/presentations/more_on_graphs.pdf)]
-
-Also see the [combined pdf](http://www.biostat.wisc.edu/~kbroman/presentations/graphs_combined.pdf).
 
 ---
 
