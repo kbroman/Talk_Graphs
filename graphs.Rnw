@@ -104,17 +104,17 @@ University of Wisconsin -- Madison
 \vspace{15mm}
 
 
-\href{http://kbroman.org}{\tt kbroman.org} \\
-\href{http://github.com/kbroman}{\tt github.com/kbroman} \\
+\href{https://kbroman.org}{\tt kbroman.org} \\
+\href{https://github.com/kbroman}{\tt github.com/kbroman} \\
 \href{https://twitter.com/kwbroman}{\tt @kwbroman} \\
-{\color{gray} Slides:} \href{http://tinyurl.com/graphs2017}{\tt tinyurl.com/graphs2017}
+{\color{gray} Slides:} \href{https://bit.ly/graphs2018}{\tt bit.ly/graphs2018}
 
 }
 
 \end{center}
 
 \vfill \hfill
-\href{http://creativecommons.org/publicdomain/zero/1.0/}{\includegraphics[height=14mm]{Figs/cc-zero.png}}
+\href{https://creativecommons.org/publicdomain/zero/1.0/}{\includegraphics[height=14mm]{Figs/cc-zero.png}}
 
 
 \newpage
@@ -413,7 +413,7 @@ for(i in 1:2)
 
 \hfill \smallestsize \color{blue}
 via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
-(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+(\href{https://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
 
 \newpage
 
@@ -436,7 +436,7 @@ for(i in 1:2)
 
 \hfill \smallestsize \color{blue}
 via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
-(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+(\href{https://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
 
 
 \newpage
@@ -466,7 +466,7 @@ for(i in 1:2)
 
 \hfill \smallestsize \color{blue}
 via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
-(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+(\href{https://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
 
 
 \newpage
@@ -495,7 +495,7 @@ for(i in 1:2)
 
 \hfill \smallestsize \color{blue}
 via \href{https://twitter.com/MonaChalabi/status/527121946073632768/photo/1}{\tt @MonaChalabi}
-(\href{http://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
+(\href{https://bit.ly/pie_vs_barchart}{\tt bit.ly/pie\_vs\_barchart})
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1374,7 +1374,7 @@ One last example
 
 
 \hfill \smallestsize \color{blue}
-\href{http://fivethirtyeight.com/datalab/which-state-has-the-worst-drivers/}{\tt fivethirtyeight.com/datalab/which-state-has-the-worst-drivers}
+\href{https://fivethirtyeight.com/datalab/which-state-has-the-worst-drivers/}{\tt fivethirtyeight.com/datalab/which-state-has-the-worst-drivers}
 
 \newpage
 
@@ -1553,11 +1553,11 @@ Turning tables into graphs. The American Statistician 56:121-130
 
 \vspace*{8mm}
 
-\item Nature Methods columns: \href{http://bang.clearscience.info/?p=546}{\tt http://bang.clearscience.info/?p=546}
+\item Nature Methods columns: \href{https://bit.ly/points_of_view}{\tt bit.ly/points\_of\_view}
 
 \vspace*{8mm}
 
-\item These slides: \href{http://tinyurl.com/graphs2017}{\tt tinyurl.com/graphs2017}
+\item These slides: \href{https://bit.ly/graphs2018}{\tt bit.ly/graphs2018}
 
 \end{itemize}
 \end{minipage}
