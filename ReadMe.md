@@ -7,7 +7,7 @@ A recent PDF is
 [here](https://www.biostat.wisc.edu/~kbroman/presentations/graphs2018.pdf).
 
 A whole bunch of older versions of the slides are at
-[my UW&ndash;Madison webpage](https://kbroman.org/pages/talks.html)
+[my UW&ndash;Madison webpage](https://kbroman.org/talks.html)
 including the
 [Director's cut](https://www.biostat.wisc.edu/~kbroman/presentations/graphs_mac.ppt)
 of
