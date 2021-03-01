@@ -6,6 +6,8 @@ it's fun.
 A recent PDF is
 [here](https://www.biostat.wisc.edu/~kbroman/presentations/graphs2018.pdf).
 
+A video is available [on youtube](https://youtu.be/Ssso_5X1UPs).
+
 A whole bunch of older versions of the slides are at
 [my UW&ndash;Madison webpage](https://kbroman.org/talks.html)
 including the
