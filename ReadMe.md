@@ -4,14 +4,14 @@ These are slides for a talk that I give as often as possible, because
 it's fun.
 
 A recent PDF is
-[here](https://www.biostat.wisc.edu/~kbroman/presentations/graphs2018.pdf).
+[here](https://kbroman.org/slides/graphs2018.pdf).
 
 A video is available [on youtube](https://youtu.be/Ssso_5X1UPs).
 
 A whole bunch of older versions of the slides are at
 [my UW&ndash;Madison webpage](https://kbroman.org/talks.html)
 including the
-[Director's cut](https://www.biostat.wisc.edu/~kbroman/presentations/graphs_mac.ppt)
+[Director's cut](https://kbroman.org/slides/graphs_mac.ppt)
 of
 [the censored version](https://kbroman.wordpress.com/2012/11/21/the-hopkins-sph-logo-part-2/).
 
@@ -24,10 +24,10 @@ directory contains only the Excel-based figures; the R-based figures
 are not included in the repository.
 
 There are also slides of the
-&ldquo;[Top Ten Worst Graphs](https://www.biostat.wisc.edu/~kbroman/topten_worstgraphs)&rdquo;
-([pdf here](https://www.biostat.wisc.edu/~kbroman/presentations/topten.pdf)).
+&ldquo;[Top Ten Worst Graphs](https://kbroman.org/topten_worstgraphs)&rdquo;
+([pdf here](https://kbroman.org/slides/topten.pdf)).
 The needed figures are not in this repository, but are available
-[here](https://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip).
+[here](https://kbroman.org/slides/TopTenWorstGraphs.zip).
 
 ---
 
