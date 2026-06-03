@@ -11,7 +11,7 @@ TopTenWorstGraphs/broman_fig1.jpg: TopTenWorstGraphs.zip
 	unzip TopTenWorstGraphs.zip
 
 TopTenWorstGraphs.zip:
-	wget http://www.biostat.wisc.edu/~kbroman/topten_worstgraphs/TopTenWorstGraphs.zip
+	wget https://kbroman.org/topten_worstgraphs/TopTenWorstGraphs.zip
 
 Figs/fig1a.png: R/fig1.R
 	cd R;R CMD BATCH fig1.R fig1.Rout
@@ -35,7 +35,7 @@ Crashes/crashes_errors.pdf: Crashes/compare_measurements.R Crashes/data.R Crashe
 	cd $(<D);R CMD BATCH $(<F)
 
 web: graphs.pdf
-	scp graphs.pdf broman-10.biostat.wisc.edu:Website/presentations/graphs2018.pdf
+	cp graphs.pdf ~/Docs/github-pages/slides/graphs2018.pdf
 
 Crashes/Figs/%.png:
 	cd $(@D);wget 'https://espnfivethirtyeight.files.wordpress.com/2014/10/$(@F)'

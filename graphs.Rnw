@@ -1387,7 +1387,7 @@ An alternative
 
 \vspace{10mm}
 
-\centerline{\href{https://www.biostat.wisc.edu/~kbroman/D3/car_crashes/}{\includegraphics{Crashes/crashes.pdf}}}
+\centerline{\href{https://kbroman.org/d3examples/car_crashes/}{\includegraphics{Crashes/crashes.pdf}}}
 
 
 \newpage
@@ -1401,7 +1401,7 @@ Scatterplots
 
 \vspace{10mm}
 
-\centerline{\href{https://www.biostat.wisc.edu/~kbroman/D3/car_crashes/}{\includegraphics{Crashes/crashes_scatter.pdf}}}
+\centerline{\href{kbroman.org/d3examples/car_crashes/}{\includegraphics{Crashes/crashes_scatter.pdf}}}
 
 
 

@@ -25,9 +25,9 @@ are not included in the repository.
 
 There are also slides of the
 &ldquo;[Top Ten Worst Graphs](https://kbroman.org/topten_worstgraphs)&rdquo;
-([pdf here](https://kbroman.org/slides/topten.pdf)).
+([pdf here](https://kbroman.org/topten_worstgraphs/topten.pdf)).
 The needed figures are not in this repository, but are available
-[here](https://kbroman.org/slides/TopTenWorstGraphs.zip).
+[here](https://kbroman.org/topten_worstgraphs/TopTenWorstGraphs.zip).
 
 ---
 
